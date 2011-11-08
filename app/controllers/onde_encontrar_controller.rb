@@ -1,0 +1,2 @@
+class OndeEncontrarController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class PhCloradorController < ApplicationController
+end

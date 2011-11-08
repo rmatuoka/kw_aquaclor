@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Aquaclor - <%=yield :title%></title>
+<%= stylesheet_link_tag "internal" %>
+<%= javascript_include_tag "jquery-1.6.4.min.js" %>
+<%= csrf_meta_tag %>
+	<%=yield :head%>
+</head>
+
+<body>
+<div class="Bg_container">
+<div class="Container">
+  <div class="Content">
+  	<%=render :file => "layouts/_header.html.erb"%>
+
+	<%=yield%> 
+   
+    <%=render :file => "layouts/_footer.html.erb"%>
+
+  </div><!-- end .Content -->
+  </div><!-- end .Container -->
+</div><!-- end .Bg_container -->  
+</body>
+</html>
+

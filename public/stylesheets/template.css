@@ -1,0 +1,474 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'luzro-webfont';
+    src: url('luzro-webfont.eot');
+    src: url('luzro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('luzro-webfont.woff') format('woff'),
+         url('luzro-webfont.ttf') format('truetype'),
+         url('luzro-webfont.svg#TheSansCorrespeBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+	background: #fff;
+	background-image:url(../images/bg_home.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;	
+	margin: 0;
+	padding: 0;
+	overflow-x:none;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl, p
+ { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6
+{
+	margin-top: 0;
+	font-weight:normal !important;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+/* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img 
+{ /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link 
+{
+	color:#414958;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited 
+{
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus
+{ /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.Container
+{	
+	width: 80%;
+	max-width: 960px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	min-width: 960px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	height:auto;
+
+}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+.Bg_container
+{
+    background-image:url(../images/bg_home.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+	min-width:960px;
+}
+.Content 
+{
+	margin:0 auto;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.Content ul, .Content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+	#Header
+	{
+		display:block;
+		position:relative;
+		width:960px;
+		height:562px;	
+	}
+	#Header #Logo
+	{
+		position:relative;
+		top:120px;
+		left:225px;
+		width:600px;
+	}	
+	#Header #Field_nautilus
+	{
+		position:relative;
+		width:200px;
+		top:-90px;
+		left:750px;
+	}	
+	#Box_1
+	{
+		display:block;
+		position:relative;
+		width:513px;
+		height:350px;
+		padding-right:27px;
+	}
+		#Box_ondeencontrar
+		{
+			position:relative;
+			background-image:url(../images/img_brazil_map.png);
+			background-repeat:no-repeat;
+			background-position:center top;
+			width:365px;
+			height:200px;
+			top:-180px;
+			left:550px;
+		}	
+		.Title_1_int
+		{
+			font-family:luzro-webfont;
+			font-size:18px;
+			font-weight:normal;
+			color:#ff9933;			
+		}
+		.Text_1_int
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:11px;
+			font-weight:normal;
+			color:#666666;
+			line-height:15px;			
+		}
+		.Text_1_int_paragraph
+		{
+			margin-left:36px;			
+		}
+		.Text_2_box1/**/
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#666666;
+			line-height:15px;
+			width:495px;
+			margin-left:35px;			
+		}									
+		.Title_2_int
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:11px;
+			font-weight:bold;
+			color:#666666;			
+		}
+		.Title_3_int_blue
+		{
+			font-family:luzro-webfont;
+			font-size:14px;
+			font-weight:bold;
+			color:#0099cc;			
+			margin-left:36px;			
+		}
+		.Title_3_int_blue a
+		{
+			font-family:luzro-webfont;
+			font-size:14px;
+			font-weight:bold;
+			color:#0099cc;	
+			text-decoration:none;			
+		}	
+		.Title_3_int_blue a:hover
+		{
+			font-family:luzro-webfont;
+			font-size:14px;
+			font-weight:bold;
+			color:#0099cc;		
+			text-decoration:underline;		
+		}
+
+														
+	#Box_2
+	{
+		display:block;
+		position:relative;
+		width:415px;
+		height:auto;
+		
+	}
+	#Box_2_linhas
+	{
+		width:645px;
+		height:291px;
+		float:left;		
+	}	
+		.Title_1_linhas/**/
+		{
+			font-family:luzro-webfont;
+			font-size:18px;
+			font-weight:normal;
+			color:#ff9933;
+			margin-left:20px;			
+		}	
+		.Box_2_linhas_item1
+		{
+			position:relative;
+			width:290px;
+			height:241px;
+			float:left;
+			
+		}		
+		.Box_2_linhas_item_image1
+		{
+			position:relative;
+			top:0px;
+			left:54px;	
+			margin-top:30px;		
+		}
+		.Text_2_box2/**/
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#666666;
+			line-height:15px;
+			width:295px;
+			text-align:center;			
+		}			
+		.Box_2_linhas_item2
+		{
+			position:relative;
+			width:290px;
+			height:241px;
+			float:left;
+			margin-left:27px;
+			
+		}		
+		.Box_2_linhas_item_image2
+		{
+			position:relative;
+			top:0px;
+			left:45px;
+			margin-top:30px;
+			
+		}				
+		.Text_3_box2/**/
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#666666;
+			line-height:15px;
+			width:281px;
+			text-align:center;		
+		}
+				
+	
+		#Box_2_video
+		{
+			display:block;
+			position:relative;
+			width:299px;
+			height:auto;
+			float:right;
+			margin-right:15px;
+			margin-top:28px;
+			*top:-300px;
+			
+		}
+		.Text_2_box2_orange/**/
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#ff9933;
+			line-height:15px;
+			width:298px;
+			text-align:center;			
+		}	
+		.Text_2_box2_orange a/**/
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#ff9933;
+			line-height:15px;
+			width:298px;
+			text-align:center;	
+			text-decoration:none;		
+		}
+		.Text_2_box2_orange a:hover/**/
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#ff9933;
+			line-height:15px;
+			width:298px;
+			text-align:center;	
+			text-decoration:underline;		
+		}				
+		.Text_2_box2_clique_video_orange/**/
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#ff9933;
+			line-height:15px;
+			width:298px;
+			text-align:center;
+			margin-top:12px;			
+		}
+		.Text_2_box2_clique_video_orange a/**/
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#ff9933;
+			line-height:15px;
+			width:298px;
+			text-align:center;
+			text-decoration:none;			
+		}	
+		.Text_2_box2_clique_video_orange a:hover/**/
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#ff9933;
+			line-height:15px;
+			width:298px;
+			text-align:center;	
+			text-decoration:underline;		
+		}							
+								
+									
+
+			.Title_3_int_blue_big
+			{
+				font-family:luzro-webfont;
+				font-size:18px;
+				font-weight:bold;
+				color:#0099cc;	
+				margin-left:23px;		
+			}
+			
+			.Text_2_box2_orange/**/
+			{
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:12px;
+				font-weight:normal;
+				color:#ff9933;
+				line-height:15px;
+				width:298px;
+				text-align:center;			
+			}					
+			.Text_2_int/**/
+			{
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:12px;
+				font-weight:normal;
+				color:#666666;
+				width:182px;
+				line-height:15px;	
+				margin-left:23px;		
+			}
+
+			.img_align_aqua_box_1/**/
+			{
+				position:relative;
+				top:0px;
+				left:68px;
+				display:block;	
+				margin-bottom:53px;
+			}
+			.img_align_line_box_2/**/
+			{
+				position:relative;
+				top:-150px;
+				left:0px;
+				display:block;	
+				margin-bottom:53px;
+			}			
+			.Title_4_int
+			{
+				font-family:luzro-webfont;
+				font-size:12px;
+				font-weight:normal;
+				color:#ff9933;
+				margin-left:23px;			
+			}	
+			.Title_4_int a
+			{
+				font-family:luzro-webfont;
+				font-size:12px;
+				font-weight:normal;
+				color:#ff9933;
+				text-decoration:none;			
+			}
+			.Title_4_int a:hover
+			{
+				font-family:luzro-webfont;
+				font-size:12px;
+				font-weight:normal;
+				color:#ff9933;	
+				text-decoration:underline;		
+			}		
+			.Title_5_int
+			{
+				font-family:luzro-webfont;
+				font-size:18px;
+				font-weight:normal;
+				color:#ff9933;	
+				margin-left:23px;		
+			}
+			.img_align_aqua_box_left
+			{
+				position:relative;
+				top:51px;
+				left:83px;	
+			}
+
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt
+{  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft
+{ /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+#Footer
+{
+	position:relative;
+	height:100px;
+	width:941px;
+	margin-top:50px;	
+}
+.Text_Footer
+{
+	position:relative;
+	top:17px;
+	float:right;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:10px;
+	font-weight:normal;
+	color:#999999;	
+	
+}
+.Mini_logo_Footer
+{
+	position:relative;
+	top:10px;
+	float:left;	
+}
+.Clear
+{ /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}

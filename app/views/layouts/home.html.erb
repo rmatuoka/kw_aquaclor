@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Aquaclor - Home</title>
+<link href="css/template.css" rel="stylesheet" type="text/css" />
+	<%= stylesheet_link_tag "template" %>
+	<%= javascript_include_tag "jquery-1.6.4.min.js" %>
+ 	<%= csrf_meta_tag %>
+</head>
+
+<body>
+<div class="Bg_container">
+    <div class="Container">
+      <div class="Content">
+        <div id="Header">
+            <div id="Logo">
+              <a href="./index.html"><img src="images/logo_aquaclor.png" width="492" height="80" /></a>
+            </div> 
+            <div id="Field_nautilus">
+                <a href="http://www.nautilus.ind.br" target="_blank"><img src="images/img_umprodutonautilus.png" width="203" height="163" /></a>
+            </div>
+        </div>
+
+		<%= yield %>
+		
+             
+        <div class="Clear"></div>
+
+        <div id="Footer">
+            <img src="images/img_footer_line_detail.png" width="941" height="1" />
+            <a href="http://www.nautilus.ind.br" target="_blank"><img  class="Mini_logo_Footer" src="images/img_mininautlogo.png" width="71" height="32" /></a>
+            <p class="Text_Footer">Nautilus (C) Todos os direitos reservados.</p>
+        </div> 
+    
+      </div><!-- end .Content -->
+  </div><!-- end .Container -->
+</div><!-- end .Bg_container --> 
+</body>
+</html>

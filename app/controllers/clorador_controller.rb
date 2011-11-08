@@ -1,0 +1,2 @@
+class CloradorController < ApplicationController
+end
