@@ -339,9 +339,9 @@ a:hover, a:active, a:focus
 
 .Down_button_align
 {
-	position:relative;
-	top:4px;
-	left:417px;
+	position:absolute;
+	top:24px;
+	left:522px;
 }
 .Slider_box .Dowbn_content
 {
