@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'luzro-webfont';
+    src: url('luzro-webfont.eot');
+    src: url('luzro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('luzro-webfont.woff') format('woff'),
+         url('luzro-webfont.ttf') format('truetype'),
+         url('luzro-webfont.svg#TheSansCorrespeBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+img{ border:none !important;}
+.Title_cnpj 
+{
+			font-family:luzro-webfont;
+			font-size:18px;
+			font-weight:normal;
+			color:#008bbf;	
+}	
+.Text_cnpj 
+{
+			font-family:luzro-webfont;
+			font-size:12px;
+			font-weight:normal;
+			color:#717171;	
+}
+	.Cnpj_box
+	{
+		position:relative;
+		width:412px;
+		height:168px;
+		margin:auto;
+		margin-top:90px;
+	}	
+form
+{
+	position:relative;
+	top:0px;
+	left:65px;
+	margin-top:35px;
+}
+	label
+	{
+		font-family:luzro-webfont;
+		font-size:14px;
+		color:#008bbf ;
+		float:left;
+		margin-top:5px;
+	}
+	.Login_input
+	{
+		width:315px;
+		height:30px;
+		background:#e5f3f8;
+		float:left;
+		margin-left:50px;
+	}
+	input
+	{
+		border:none;
+		background:none;
+		width:286px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:11px;
+		color:#717171;
+		margin-left:14px;
+		*margin-left:-37px;
+		margin-top:7px;
+	}
+	.Spacefield
+	{
+		height:10px;
+	}
+	.bt_cadastrar_align
+	{
+		position:relative;
+		top:25px;
+		*top:10px;
+		left:130px;
+	}
+	.Img_line_align
+	{
+		position:absolute;
+		top:-9px;
+		left:57px;
+		border:none;
+	}
+
+.clear
+{
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}

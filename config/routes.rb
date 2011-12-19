@@ -5,6 +5,12 @@ KwAquaclor::Application.routes.draw do
   resources :ph_clorador
   resources :onde_encontrar
   resources :home
+
+  namespace(:revendas) do
+	resources :users
+	resources :dashboard
+	resources :cnpj
+  end
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

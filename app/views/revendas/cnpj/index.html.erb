@@ -1,0 +1,49 @@
+<%content_for :title do%>
+	
+<%end%>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Aquaclor - Cnpj</title>
+	<%= stylesheet_link_tag "cnpj" %>
+</head>
+<%content_for :head do%>
+	<script>
+	$(document).ready(function() {
+	    $(".Slider_box").hide();
+
+		$("#Div_clique").click(function(){
+			if ($(".Slider_box").is(":hidden")) {
+				$(".Slider_box").slideDown("slow");
+			} else {
+				$(".Slider_box").slideUp("hide");
+			}
+		});
+	});
+	</script>
+<%end%>
+
+<div id="Box_left">
+<h1 class="Title_cnpj">Lorem Ipsum</h1>
+    <p class="Text_1_int">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si.</p>
+	<div class="Cnpj_box"
+		<form>
+			<label>CNPJ</label><div class="Login_input"><input type="text" value="000.000.000-00"/></div>
+			<div class="Spacefield"></div><br /><br /><br />
+			<%=link_to  image_tag("bt_cadastrar_login.png", :class=>"bt_cadastrar_align"),"#" %>
+			<%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %>
+		<form>
+	</div> 
+</div>
+<div id="Box_right">
+    <div id="Box_ondeencontrar">
+    <br />
+        <h1 class="Title_3_int_blue_big">Onde encontrar?</h1>
+        <p class="Text_2_int">Selecione as informações de sua localização abaixo e encontre as revendas mais próximas.</p>
+        <p class="Title_4_int"><a href="./onde_encontrar">Clique aqui!</a></p><br /><br /><br /><br /><br /><br />
+        <h1 class="Title_5_int">Veja também:</h1>
+        <a href="./ph_clorador"><img src="../images/img_aquaclor_ph_cl.png" width="205" height="61" class="img_align_aqua_box_left" /></a>
+		<br /><br /><br />
+		<a href="./clorador"><img src="../images/img_aquaclor_clorador.png" width="205" height="61" class="img_align_aqua_box_left" /></a>
+    </div>   
+
+</div>

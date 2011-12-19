@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Aquaclor - Login</title>
+	<%= stylesheet_link_tag "login" %>
+</head>
+
+<body>
+<div id="Login_box">
+	<span class="Tit_login">Login para Revenda</span>
+	<span class="Tit_no_cad">Ainda não sou cadastrado!</span>
+	
+	<form >
+		<label>E-mail</label><div class="Login_input"><input type="text" value="nome@provedor.com"/></div>
+		<div class="Spacefield"></div><br /><br />
+		<label>Senha</label><div class="Login_input"><input type="text" value="*******"/></div>
+		<div class="Spacefield"></div><br />
+		<%=link_to  image_tag("bt_cadastrar_login.png", :class=>"bt_cadastrar_align"),"#" %>
+		<%= image_tag("line_details_login.png", :class=>"Img_line_align") %>
+	<form>
+</div>
+</body>
+</html>

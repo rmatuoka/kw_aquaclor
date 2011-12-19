@@ -1,0 +1,2 @@
+module Revendas::CnpjHelper
+end
