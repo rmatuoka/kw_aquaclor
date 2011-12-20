@@ -1,7 +1,11 @@
 <%content_for :title do%>
 	
 <%end%>
-
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Aquaclor - Ranking</title>
+	<%= stylesheet_link_tag "ranking" %>
+</head>
 <%content_for :head do%>
 	<script>
 	$(document).ready(function() {
@@ -19,39 +23,39 @@
 <%end%>
 
 <div id="Box_left">
-<h1 class="Title_1_int">Gerador de Cloro:</h1>
-    <p class="Text_1_int">O AquaclorClorador mantém a água da sua piscina sempre limpa e adequada para uso, com segurança e sem trabalho.</p>
-    <br />
-    <p class="Text_1_int">O AquaClorClorador garante que a cloração da água de piscinas seja feita automaticamente. Utilizando tecnologia largamente aplicada em países como Austrália, África do Sul, Estados Unidos e países da Europa, a Nautilus desenvolveu um equipamento que produz cloro a partir do sal, através de um processo de eletrólise. É a forma mais econômica e ecológica de manter uma piscina clorada. </p>
-    <br />
-    <span class="Title_2_int">Confira as principais vantagens que o AquaclorClorador garante a você:</span>
-    <br />
-    <div class="Text_topic_field">
-    	<p class="Text_1_int"><span class="Text_1_int_topic_num">1.</span> Não há risco de incêndio e explosões, nem os incômodos de manusear outros tipos de cloro; </p>
-    	<p class="Text_1_int"><span class="Text_1_int_topic_num">2.</span> Não causa irritação nos olhos e na pele, não afeta os cabelos e não produz odores desagradáveis;</p> 
-   		<p class="Text_1_int"><span class="Text_1_int_topic_num">3.</span>Mantém sua piscina adequada para uso todos os dias, de forma sustentável, econômica e sem trabalho; </p>    
-		<p class="Text_1_int"><span class="Text_1_int_topic_num">4.</span>Garante mais tempo a você e sua família para aproveitarem a piscina com segurança e sem preocupação.</p>
-    </div>
-    <br /><br />
-    <p class="Text_1_int">O AquaClor é constituído de uma unidade retificadora de corrente elétrica e de células eletrolíticas de titânio. O cloro é gerado a partir da adição do sal, preferencialmente isento de iodo, na água da piscina, numa proporção de 45 Kg de sal para cada 10.000 litros de água (4.500 ppm – partes por milhão). Essa concentração de sal corresponde à concentração de sal de uma lágrima humana. A título de comparação, a concentração normal da água do mar é cerca de 10 vezes maior. Produzido no Brasil e com alto índice de componentes nacionais, o AquaClorapresenta uma rápida e econômica reposição depeças originais.</p>
-    <br />
-    <span class="Title_3_int_blue" id="Div_clique"><a ><img src="images/img_arrowright_detail.png" width="7" height="6" style="margin-bottom:2px;" />Informações técnicas</a></span>
-        <div id="Field_download">
-            <div class="Slider_box">
-                <div class="Down_content">
-                <span class="Down_text1"><a href="#" >Manual do Produto</a> </span><br />
-                <span class="Down_text2">Nomearquivo</span><span class="Down_text2"><img src="images/img_detail_line_download.png" width="2" height="10" class="Detail_img_linedetail" />00mb</span>
-                <a href="#" ><img src="images/img_arrow_download.png" width="16" height="15" class="Down_button_align"/></a>
-                </div>				
-				<br />
-                <div class="Down_content">
-                <span class="Down_text1"><a href="/images/Folheto Aquaclor Web.pdf" >Folheto Aquaclor</a> </span><br />
-                <span class="Down_text2">Folheto Aquaclor</span><span class="Down_text2"><img src="images/img_detail_line_download.png" width="2" height="10" class="Detail_img_linedetail" />4.2mb</span>
-                <a href="/images/Folheto Aquaclor Web.pdf" ><img src="images/img_arrow_download.png" width="16" height="15" class="Down_button_align"/></a>
-                </div>				
-            </div>
-        </div>
-    </div>	 
+	<div class="Ranking_box">
+		
+		<div class="Info_user">
+			<span class="h1_title_info">Nome do Usuário</span><br />
+			<span class="h2_title_info">Nome da Revenda</span>
+			<span class="Align_bt_altera_dados">Alterar dados pessoais</span>
+			<%= image_tag("img_detail_line_user_info.png", :class=>"Img_info_align")%>
+		</div>
+		<div class="Ranking_info">
+			<span class="Title_ranking">Ranking</span>
+			<div class="First_position">
+				<span class="Position_num_blue">1º</span><span class="Position_text">Vendeu</span><span class="Position_num_orange">99999999</span><span class="Position_text">produtos.</span>
+			</div>
+			<div class="Your_position">
+				<span class="Position_num_blue">999º</span><span class="Position_text">Você Vendeu</span><span class="Position_num_orange">99999999</span><span class="Position_text">produtos.</span>
+			</div>						
+		</div>
+		<div class="Produtcts_positivation">
+			<span class="Title_ranking">Positivação de Produtos</span>
+			<div class="Search">
+				<span>Buscar por Nota</span><%= image_tag("img_detal_cnpj.png")%><span>Buscar por Nota</span><span><input type="text"/></span><span><%= image_tag("bt_buscar.png")%></span>
+			</div>
+			<div class="Notes">
+				<span class="Position_num_blue">999º</span><span class="Position_text">Você Vendeu</span><span class="Position_num_orange">99999999</span><span class="Position_text">produtos.</span>
+			</div>		
+			<div class="Product_name">
+				<span class="Position_text"><%= image_tag("img_point.png")%>Nome do Produto</span><span class="Position_num_orange">99999999</span><span class="Position_text"><%= image_tag("img_like_blue.png")%></span>
+			</div>		
+			<div class="Product_name">
+				<span class="Position_text"><%= image_tag("img_point.png")%>Nome do Produto</span><span class="Position_num_orange">99999999</span><span class="Position_text"><%= image_tag("img_like_gray.png")%></span>
+			</div>							
+		</div>		
+	</div> 
 </div>
 <div id="Box_right">
     <div id="Box_ondeencontrar">
@@ -60,6 +64,9 @@
         <p class="Text_2_int">Selecione as informações de sua localização abaixo e encontre as revendas mais próximas.</p>
         <p class="Title_4_int"><a href="./onde_encontrar">Clique aqui!</a></p><br /><br /><br /><br /><br /><br />
         <h1 class="Title_5_int">Veja também:</h1>
-        <a href="./ph_clorador"><img src="images/img_aquaclor_ph_cl.png" width="205" height="61" class="img_align_aqua_box_left" /></a>
-    </div>    
+        <a href="./ph_clorador"><img src="../images/img_aquaclor_ph_cl.png" width="205" height="61" class="img_align_aqua_box_left" /></a>
+		<br /><br /><br />
+		<a href="./clorador"><img src="../images/img_aquaclor_clorador.png" width="205" height="61" class="img_align_aqua_box_left" /></a>
+    </div>   
+
 </div>

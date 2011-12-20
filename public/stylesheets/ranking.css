@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'luzro-webfont';
+    src: url('luzro-webfont.eot');
+    src: url('luzro-webfont.eot?#iefix') format('embedded-opentype'),
+         url('luzro-webfont.woff') format('woff'),
+         url('luzro-webfont.ttf') format('truetype'),
+         url('luzro-webfont.svg#TheSansCorrespeBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+img{ border:none !important;}
+.Title_cadastro 
+{
+			font-family:luzro-webfont;
+			font-size:18px;
+			font-weight:normal;
+			color:#008bbf;	
+}	
+.Text_cadastro
+{
+			font-family:luzro-webfont;
+			font-size:12px;
+			font-weight:normal;
+			color:#717171;	
+}
+	.Ranking_box
+	{
+		position:relative;
+		width:541px;
+		height:126px;
+		margin:auto;
+		margin-top:auto;
+	}
+		.Info_user
+		{
+			position:relative;
+			width:541px;
+			height:126px;
+			margin:auto;
+			margin-top:90px;		
+		}
+			.h1_title_info
+			{
+					font-family:luzro-webfont;
+					font-size:18px;
+					color:#f48032;
+					font-weight:normal;
+			}
+			.h2_title_info
+			{
+					font-family:luzro-webfont;
+					font-size:14px;
+					color:#008bbf;
+					font-weight:normal;		
+			}
+			.Align_bt_altera_dados
+			{
+				position:absolute;
+				top:25px;
+				left:380px;
+				font-family:luzro-webfont;
+				font-size:14px;
+				color:#c2bbbb;
+				font-weight:normal;		
+				text-decoration:none;
+			}
+				.Align_bt_altera_dados:hover
+				{
+					text-decoration:underline;
+				}
+			.Img_info_align
+			{
+				position:absolute;
+				top:65px;
+				left:0px;
+			}
+	.Ranking_info
+	{
+		position:relative;
+		width:541px;
+		height:165px;
+		margin:auto;		
+	}
+		.Title_ranking
+		{
+			font-family:luzro-webfont;
+			font-size:22px;
+			color:#f48032;
+			font-weight:normal;		
+		}
+		.First_position
+		{
+			width:537px;
+			height:47px;
+			margin:0 auto;
+			text-align:center;
+			padding-top:17px;
+	
+		}
+			.Position_num_blue
+			{
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:24px;
+				color:#1e8ec1;
+				margin-right:23px;			
+			}		
+			.Position_text
+			{
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:18px;	
+				color:#565656;
+				margin-right:12px;				
+			}
+			.Position_num_orange
+			{
+				font-family:Verdana, Geneva, sans-serif;
+				font-size:18px;
+				color:#f48032;	
+				margin-right:12px;		
+			}		
+		.Your_position
+		{
+			width:537px;
+			height:47px;
+			margin:0 auto;
+			text-align:center;
+			padding-top:17px;
+			background:#f1f1f1;	
+		}
+	.Produtcts_positivation	
+	{
+		position:relative;
+		width:541px;
+		height:165px;
+		margin:auto;			
+	}
+		.Notes
+		{
+			width:537px;
+			height:47px;
+			margin:0 auto;
+			text-align:center;
+			padding-top:17px;
+			background:#f1f1f1;	
+		}	
+		.Product_name
+		{
+			width:537px;
+			height:47px;
+			margin:0 auto;
+			text-align:center;
+			padding-top:17px;
+			background:#f8f8f8;	
+		}			
+.clear
+{
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}

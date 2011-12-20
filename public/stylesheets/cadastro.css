@@ -11,34 +11,47 @@
     font-style: normal;
 }
 img{ border:none !important;}
-.Title_cnpj 
+.Title_cadastro 
 {
 			font-family:luzro-webfont;
 			font-size:18px;
 			font-weight:normal;
 			color:#008bbf;	
 }	
-.Text_cnpj 
+.Text_cadastro
 {
 			font-family:luzro-webfont;
 			font-size:12px;
 			font-weight:normal;
 			color:#717171;	
 }
-	.Cnpj_box
+	.Cadastro_box
 	{
 		position:relative;
-		width:412px;
-		height:168px;
+		width:463px;
+		height:830px;
 		margin:auto;
 		margin-top:90px;
+	}
+	.Cad_item_box
+	{
+		position:relative;
+		width:auto;
+		height:50px;
+		margin:auto;
+		padding-top:17px;
 	}	
+	.Cad_item_text_area_box
+	{
+		position:relative;
+		width:auto;
+		height:250px;
+		margin:auto;
+		padding-top:17px;
+	}			
 form
 {
 	position:relative;
-	top:0px;
-	left:65px;
-	margin-top:35px;
 }
 	label
 	{
@@ -56,6 +69,54 @@ form
 		float:left;
 		margin-left:50px;
 	}
+	.Login_input_endereco
+	{
+		width:315px;
+		height:30px;
+		background:#e5f3f8;
+		float:left;
+		margin-left:53px;
+	}	
+	.Login_input_data_nasc
+	{
+		width:315px;
+		height:30px;
+		background:#e5f3f8;
+		float:left;
+		margin-left:37px;
+	}
+	.Login_input_est_civil
+	{
+		width:315px;
+		height:30px;
+		background:#e5f3f8;
+		float:left;
+		margin-left:39px;
+	}
+	.Login_input_est_civil
+	{
+		width:315px;
+		height:30px;
+		background:#e5f3f8;
+		float:left;
+		margin-left:39px;
+	}
+	.Login_input_telefone
+	{
+		width:315px;
+		height:30px;
+		background:#e5f3f8;
+		float:left;
+		margin-left:56px;
+	}	
+	.Login_input_email
+	{
+		width:315px;
+		height:30px;
+		background:#e5f3f8;
+		float:left;
+		margin-left:70px;
+	}						
 	input
 	{
 		border:none;
@@ -68,6 +129,27 @@ form
 		*margin-left:-37px;
 		margin-top:7px;
 	}
+	.Text_area_input
+	{
+		width:315px;
+		height:30px;
+		float:left;
+		margin-left:30px;
+		*margin-left:15px;	
+	}	
+	textarea
+	{
+		width:288px;
+		height:184px;
+		background:#e5f3f8;
+		border:none;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:11px;
+		color:#717171;	
+		padding-left:22px;
+		padding-top:22px;
+		text-align:left;	
+	}
 	.Spacefield
 	{
 		height:10px;
@@ -75,18 +157,45 @@ form
 	.bt_cadastrar_align
 	{
 		position:relative;
-		top:25px;
-		*top:10px;
-		left:130px;
+		left:107px;
 	}
 	.Img_line_align
 	{
-		position:absolute;
-		top:-9px;
-		left:57px;
-		border:none;
+		position:absolute; 
+		left:85px; 
+		top:10px;
 	}
-
+	.Img_line_textarea_align
+	{
+		position:absolute; 
+		left:85px; 
+		top:18px;
+	}
+	.checkbox_inp
+	{
+		position:absolute;
+		top:230px;
+		left:95px;
+		width:200px;
+		height:20px;
+	}
+	.checkbox_inp input
+	{
+		width:10px;		
+		position:relative;
+		top:-0px;
+		left:0px;
+	}	
+	.label_checkbox
+	{
+		width:auto;		
+		position:relative;
+		top:-2px;
+		left:0px;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:12px;
+		color:#a9a9a9;
+	}		
 .clear
 {
 	clear:both;
