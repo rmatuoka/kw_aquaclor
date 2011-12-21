@@ -136,24 +136,111 @@ img{ border:none !important;}
 		height:165px;
 		margin:auto;			
 	}
+	.Search	
+	{
+		position:relative;
+	}
+		.Search_text
+		{
+			position:relative;
+			font-family:luzro-webfont;
+			font-size:14px;
+			color:#717171;
+			width:auto;
+			float:right;
+			top:15px;						
+		}
+		.Img_line_detail
+		{
+			position:relative;
+			float:right;
+			margin-left:26px;
+			margin-right:26px;
+		}
+		.Bg_input_search
+		{
+			position:relative;
+			background:#e5f3f8;
+			float:right;
+			width:259px;
+			height:29px;
+			top:10px;
+		}	
+		.Bg_input_search input
+		{
+			position:relative;
+			top:5px;
+			left:14px;
+			width:227px;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:11px;
+			color:#717171;	
+			background:none;
+			border:none !important;		
+		}
+		.Bt_search
+		{
+			position:relative;
+			float:right;
+			margin-left:7px;
+			top:11px;
+		}
 		.Notes
 		{
 			width:537px;
-			height:47px;
+			height:41px;
 			margin:0 auto;
-			text-align:center;
-			padding-top:17px;
+			text-align:left;
+			padding-top:23px;
 			background:#f1f1f1;	
 		}	
+		.Notes_text
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:16px;
+			color:#565656;
+			margin-left:24px;				
+		}	
+		.Notes_num
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:16px;
+			color:#f48032;
+			margin-left:11px;				
+		}				
 		.Product_name
 		{
+			position:relative;
+			width:537px;
+			height:40px;
+			margin:0 auto;
+			text-align:left;
+			padding-top:24px;
+			background:#f8f8f8;	
+		}
+		.Product_name_text
+		{
+			position:relative;
 			width:537px;
 			height:47px;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:14px;
+			color:#565656;			
 			margin:0 auto;
-			text-align:center;
-			padding-top:17px;
+			text-align:left;
 			background:#f8f8f8;	
 		}			
+		.Point_img_align
+		{
+			margin-left:22px;
+			margin-right:24px;
+		}		
+		.Like_img_align
+		{
+			position:absolute;
+			top:16px;
+			left:485px;
+		}
 .clear
 {
 	clear:both;

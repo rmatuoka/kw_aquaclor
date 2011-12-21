@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Aquaclor - Ranking</title>
-	<%= stylesheet_link_tag "ranking" %>
+	<%= stylesheet_link_tag "dashboard" %>
 </head>
 <%content_for :head do%>
 	<script>
@@ -38,23 +38,32 @@
 			</div>
 			<div class="Your_position">
 				<span class="Position_num_blue">999º</span><span class="Position_text">Você Vendeu</span><span class="Position_num_orange">99999999</span><span class="Position_text">produtos.</span>
-			</div>						
+			</div>	
+								
 		</div>
+		<br /><br /><br />
 		<div class="Produtcts_positivation">
 			<span class="Title_ranking">Positivação de Produtos</span>
 			<div class="Search">
-				<span>Buscar por Nota</span><%= image_tag("img_detal_cnpj.png")%><span>Buscar por Nota</span><span><input type="text"/></span><span><%= image_tag("bt_buscar.png")%></span>
+				<div class="Clear"></div><br />	<br />			
+				<div class="Bt_search"><%= link_to image_tag("bt_buscar.png"), "#"%></div>
+				<div class="Bg_input_search"><input type="text"/></div>
+				<div class="Img_line_detail"><%= image_tag("img_detal_cnpj.png")%></div>
+				<div class="Search_text">Buscar por Nota</div>
+				<div class="Clear"></div><br /><br />
 			</div>
 			<div class="Notes">
-				<span class="Position_num_blue">999º</span><span class="Position_text">Você Vendeu</span><span class="Position_num_orange">99999999</span><span class="Position_text">produtos.</span>
+				<span class="Notes_text">Nota Nº</span><span class="Notes_num">9999999</span>
 			</div>		
 			<div class="Product_name">
-				<span class="Position_text"><%= image_tag("img_point.png")%>Nome do Produto</span><span class="Position_num_orange">99999999</span><span class="Position_text"><%= image_tag("img_like_blue.png")%></span>
-			</div>		
+				<span class="Product_name_text"><%= image_tag("img_point.png", :class=>"Point_img_align") %>Nome do Produto</span><%= image_tag("img_like_blue.png", :class=>"Like_img_align")%>
+			</div>
+			<br />		
 			<div class="Product_name">
-				<span class="Position_text"><%= image_tag("img_point.png")%>Nome do Produto</span><span class="Position_num_orange">99999999</span><span class="Position_text"><%= image_tag("img_like_gray.png")%></span>
+				<span class="Product_name_text"><%= image_tag("img_point.png", :class=>"Point_img_align")%>Nome do Produto</span><%= image_tag("img_like_gray.png", :class=>"Like_img_align")%>
 			</div>							
-		</div>		
+		</div>	
+			
 	</div> 
 </div>
 <div id="Box_right">
