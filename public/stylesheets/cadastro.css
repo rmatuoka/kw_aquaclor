@@ -117,7 +117,7 @@ form
 		float:left;
 		margin-left:70px;
 	}						
-	input
+	#Cad_Box input
 	{
 		border:none;
 		background:none;
@@ -203,3 +203,52 @@ form
 	font-size: 1px;
 	line-height: 0px;
 }
+ 	.flash_ops
+	{
+		background-image:url(../images/bg_ops.png);
+	}
+	.flash_ok
+	{
+		background-image:url(../images/bg_ok.png);
+	}
+	
+#Box_warning_img
+	{
+		position:absolute;
+		top:50%;
+		margin-top:-35px;
+		left:32px;
+	}
+.Box_warning_text
+{
+	position:relative;
+	width:526px;
+	min-height:102px;
+	height:auto;
+	float:right;
+	top:15px;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#666;			
+}	
+	.Box_warning_text h2
+	{
+		position:relative;
+		text-align:left;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:20px;
+		font-weight:normal;
+		color:#666;			
+	}	
+	 .Box_warning_text p
+	{
+		position:relative;
+		text-align:left;
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:12px;
+		font-weight:normal;
+		color:#666;			
+	}						
+
+
