@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  number: MyString
+  reseller_id: 1
+  obs: MyText
+
+two:
+  number: MyString
+  reseller_id: 1
+  obs: MyText
