@@ -10,6 +10,50 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20111222180726) do
+
+  create_table "product_receipts_users", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "products_receipt_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.boolean  "active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products_receipts", :force => true do |t|
+    t.integer  "product_id"
+    t.integer  "receipt_id"
+    t.integer  "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "receipts", :force => true do |t|
+    t.string   "number"
+    t.integer  "reseller_id"
+    t.text     "obs"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "resellers", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "number"
+    t.string   "neibourhood"
+    t.string   "city"
+    t.string   "state"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "cnpj"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
