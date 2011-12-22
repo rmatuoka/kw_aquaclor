@@ -23,20 +23,22 @@ KwAquaclor::Application.routes.draw do
   resources :home
 
   namespace(:revendas) do
-	resources :users
-  resources :dashboard do
-    collection do
-      get 'busca'
+    resources :dashboard do
+      collection do
+        get 'busca'
+      end
     end
+  	resources :users
+    resources :cnpj    
   end
-  resources :cnpj
 
   match 'cadastro' => "users#new"
   match 'login' => 'user_sessions#new'  
   match 'logout' => 'user_sessions#destroy'	
 	
-  root :to => "home#index"	
-  end
+  root :to => "home#index"
+  	
+
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
