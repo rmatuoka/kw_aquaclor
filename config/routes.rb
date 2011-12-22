@@ -7,9 +7,13 @@ KwAquaclor::Application.routes.draw do
   resources :home
 
   namespace(:revendas) do
-	resources :users
-	resources :dashboard
-	resources :cnpj
+	  resources :users
+	  resources :dashboard do
+      collection do
+        get 'busca'
+      end
+    end
+	  resources :cnpj
   end
   
   # The priority is based upon order of creation:

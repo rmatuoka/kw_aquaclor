@@ -30,6 +30,7 @@
 				<span class="Align_bt_altera_dados">Alterar dados pessoais</span>
 				<%= image_tag("img_detail_line_user_info.png", :class=>"Img_info_align")%>
 			</div>
+			
 			<div class="Clear"></div>
 			<div class="Ranking_info">
 				<span class="Title_ranking">Ranking</span>
@@ -41,29 +42,48 @@
 					<span class="Position_num_blue">999º</span><span class="Position_text">Você Vendeu</span><span class="Position_num_orange">99999999</span><span class="Position_text">produtos.</span>
 				</div>	
 				<div class="Clear"></div>				
+			
 			</div>
 		</div>
 		<br /><br /><br />
 		<div class="Clear"></div>
 		<div class="Produtcts_positivation">
+			<!-- FORMULARIO -->
 			<span class="Title_ranking">Positivação de Produtos</span>
 			<div class="Search">
-				<div class="Clear"></div><br />	<br />			
-				<div class="Bt_search"><%= link_to image_tag("bt_buscar.png"), "#"%></div>
-				<div class="Bg_input_search"><input type="text"/></div>
-				<div class="Img_line_detail"><%= image_tag("img_detal_cnpj.png")%></div>
-				<div class="Search_text">Buscar por Nota</div>
-				<div class="Clear"></div><br /><br />
+				<%=form_tag ("/revendas/dashboard/busca", :remote => true)%>
+					<div class="Clear"></div><br />	<br />			
+					<div class="Bt_search"><%= image_submit_tag("bt_buscar.png")%></div>
+					<div class="Bg_input_search"><input type="text"/></div>
+					<div class="Img_line_detail"><%= image_tag("img_detal_cnpj.png")%></div>
+					<div class="Search_text">Buscar por Nota</div>
+					<div class="Clear"></div><br /><br />
+				</form>
 			</div>
+			<!-- /FORMULARIO -->
+			
+			<!-- HEADER RESULTADO -->
 			<div class="Notes">
+				
 				<span class="Notes_text">Nota Nº</span><span class="Notes_num">9999999</span>
-			</div>		
+				
+			</div>
+			<!-- /HEADER RESULTADO -->
+				
+			<!-- RESULTADO -->	
 			<div class="Product_name">
-				<span class="Product_name_text"><%= image_tag("img_point.png", :class=>"Point_img_align") %>Nome do Produto</span><%= image_tag("img_like_blue.png", :class=>"Like_img_align")%>
+				<span class="Product_name_text">
+					<%= image_tag("img_point.png", :class=>"Point_img_align") %>Nome do Produto</span>
+					<%= image_tag("img_like_blue.png", :class=>"Like_img_align")%>
 			</div>	
+			<!-- /RESULTADO -->
+			<!-- 
 			<div class="Product_name">
-				<span class="Product_name_text"><%= image_tag("img_point.png", :class=>"Point_img_align")%>Nome do Produto</span><%= image_tag("img_like_gray.png", :class=>"Like_img_align")%>
-			</div>														
+				<span class="Product_name_text">
+					<%= image_tag("img_point.png", :class=>"Point_img_align")%>Nome do Produto</span>
+					<%= image_tag("img_like_gray.png", :class=>"Like_img_align")%>
+			</div>
+			-->														
 		</div>					
 </div> 
 
