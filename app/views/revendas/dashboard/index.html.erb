@@ -1,25 +1,5 @@
-<%content_for :title do%>
-	
-<%end%>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Aquaclor - Ranking</title>
-	<%= stylesheet_link_tag "dashboard" %>
-</head>
 <%content_for :head do%>
-	<script>
-	$(document).ready(function() {
-	    $(".Slider_box").hide();
-
-		$("#Div_clique").click(function(){
-			if ($(".Slider_box").is(":hidden")) {
-				$(".Slider_box").slideDown("slow");
-			} else {
-				$(".Slider_box").slideUp("hide");
-			}
-		});
-	});
-	</script>
+	<%= stylesheet_link_tag "dashboard" %>
 <%end%>
 
 <div id="Box_left">
@@ -54,7 +34,7 @@
 				<%=form_tag ("/revendas/dashboard/busca", :remote => true)%>
 					<div class="Clear"></div><br />	<br />			
 					<div class="Bt_search"><%= image_submit_tag("bt_buscar.png")%></div>
-					<div class="Bg_input_search"><input type="text"/></div>
+					<div class="Bg_input_search"><%=text_field_tag :busca%></div>
 					<div class="Img_line_detail"><%= image_tag("img_detal_cnpj.png")%></div>
 					<div class="Search_text">Buscar por Nota</div>
 					<div class="Clear"></div><br /><br />
@@ -64,18 +44,14 @@
 			
 			<!-- HEADER RESULTADO -->
 			<div class="Notes">
-				
-				<span class="Notes_text">Nota Nº</span><span class="Notes_num">9999999</span>
-				
+				<span class="Notes_text">Nota Nº</span><span class="Notes_num"></span>
 			</div>
 			<!-- /HEADER RESULTADO -->
+			<div id="Container_Resultados" style="display:none;">
 				
+			</div>
 			<!-- RESULTADO -->	
-			<div class="Product_name">
-				<span class="Product_name_text">
-					<%= image_tag("img_point.png", :class=>"Point_img_align") %>Nome do Produto</span>
-					<%= image_tag("img_like_blue.png", :class=>"Like_img_align")%>
-			</div>	
+			
 			<!-- /RESULTADO -->
 			<!-- 
 			<div class="Product_name">
@@ -92,11 +68,11 @@
     <br />
         <h1 class="Title_3_int_blue_big">Onde encontrar?</h1>
         <p class="Text_2_int">Selecione as informações de sua localização abaixo e encontre as revendas mais próximas.</p>
-        <p class="Title_4_int"><a href="./onde_encontrar">Clique aqui!</a></p><br /><br /><br /><br /><br /><br />
+        <p class="Title_4_int"><a href="/onde_encontrar">Clique aqui!</a></p><br /><br /><br /><br /><br /><br />
         <h1 class="Title_5_int">Veja também:</h1>
-        <a href="./ph_clorador"><img src="../images/img_aquaclor_ph_cl.png" width="205" height="61" class="img_align_aqua_box_left" /></a>
+        <a href="/ph_clorador"><img src="../images/img_aquaclor_ph_cl.png" width="205" height="61" class="img_align_aqua_box_left" /></a>
 		<br /><br /><br />
-		<a href="./clorador"><img src="../images/img_aquaclor_clorador.png" width="205" height="61" class="img_align_aqua_box_left" /></a>
+		<a href="/clorador"><img src="../images/img_aquaclor_clorador.png" width="205" height="61" class="img_align_aqua_box_left" /></a>
     </div>   
 
 </div>

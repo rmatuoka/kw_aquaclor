@@ -1,0 +1,21 @@
+<%if @nota%>
+	$(".Notes_num").html(<%=escape_javascript(@nota.number)%>);
+	$("#Container_Resultados").fadeIn('fast');
+	
+	var ret = "";
+	
+	<%@produtos.each do |p|%>
+		ret += "<div class='Product_name'>";
+		ret += "<span class=\"Product_name_text\">";
+		ret += "<%= escape_javascript(image_tag("img_point.png", :class=>"Point_img_align")) %><%=p.product.name%></span>";
+		
+		ret += "<%= escape_javascript(link_to(image_tag("img_like_blue.png", :class=>"Like_img_align"), positivar_revendas_dashboard_index_path + "?p=#{p.id}" , :remote => true)) %>";
+		
+		ret += "</div>";
+	<%end%>
+	
+	$("#Container_Resultados").html(ret);
+	
+<%else%>
+	alert("Nota não encontrada. Verifique se o número foi digitado corretamente.");
+<%end%>

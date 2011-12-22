@@ -25,7 +25,8 @@ KwAquaclor::Application.routes.draw do
   namespace(:revendas) do
     resources :dashboard do
       collection do
-        get 'busca'
+        post 'busca'
+        get 'positivar'
       end
     end
   	resources :users
