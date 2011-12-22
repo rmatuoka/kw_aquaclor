@@ -23,25 +23,28 @@
 <%end%>
 
 <div id="Box_left">
-	<div class="Ranking_box">
-		
-		<div class="Info_user">
-			<span class="h1_title_info">Nome do Usuário</span><br />
-			<span class="h2_title_info">Nome da Revenda</span>
-			<span class="Align_bt_altera_dados">Alterar dados pessoais</span>
-			<%= image_tag("img_detail_line_user_info.png", :class=>"Img_info_align")%>
-		</div>
-		<div class="Ranking_info">
-			<span class="Title_ranking">Ranking</span>
-			<div class="First_position">
-				<span class="Position_num_blue">1º</span><span class="Position_text">Vendeu</span><span class="Position_num_orange">99999999</span><span class="Position_text">produtos.</span>
+		<div class="Ranking_box">		
+			<div class="Info_user">
+				<span class="h1_title_info">Nome do Usuário</span><br />
+				<span class="h2_title_info">Nome da Revenda</span>
+				<span class="Align_bt_altera_dados">Alterar dados pessoais</span>
+				<%= image_tag("img_detail_line_user_info.png", :class=>"Img_info_align")%>
 			</div>
-			<div class="Your_position">
-				<span class="Position_num_blue">999º</span><span class="Position_text">Você Vendeu</span><span class="Position_num_orange">99999999</span><span class="Position_text">produtos.</span>
-			</div>	
-								
+			<div class="Clear"></div>
+			<div class="Ranking_info">
+				<span class="Title_ranking">Ranking</span>
+				<div class="First_position">
+					<span class="Position_num_blue">1º</span><span class="Position_text">Vendeu</span><span class="Position_num_orange">99999999</span><span class="Position_text">produtos.</span>
+				</div>
+				<div class="Clear"></div>
+				<div class="Your_position">
+					<span class="Position_num_blue">999º</span><span class="Position_text">Você Vendeu</span><span class="Position_num_orange">99999999</span><span class="Position_text">produtos.</span>
+				</div>	
+				<div class="Clear"></div>				
+			</div>
 		</div>
 		<br /><br /><br />
+		<div class="Clear"></div>
 		<div class="Produtcts_positivation">
 			<span class="Title_ranking">Positivação de Produtos</span>
 			<div class="Search">
@@ -57,15 +60,13 @@
 			</div>		
 			<div class="Product_name">
 				<span class="Product_name_text"><%= image_tag("img_point.png", :class=>"Point_img_align") %>Nome do Produto</span><%= image_tag("img_like_blue.png", :class=>"Like_img_align")%>
-			</div>
-			<br />		
+			</div>	
 			<div class="Product_name">
 				<span class="Product_name_text"><%= image_tag("img_point.png", :class=>"Point_img_align")%>Nome do Produto</span><%= image_tag("img_like_gray.png", :class=>"Like_img_align")%>
-			</div>							
-		</div>	
-			
-	</div> 
-</div>
+			</div>														
+		</div>					
+</div> 
+
 <div id="Box_right">
     <div id="Box_ondeencontrar">
     <br />

@@ -1,5 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
+
+
 @font-face {
     font-family: 'luzro-webfont';
     src: url('luzro-webfont.eot');
@@ -29,9 +31,8 @@ img{ border:none !important;}
 	{
 		position:relative;
 		width:541px;
-		height:126px;
-		margin:auto;
-		margin-top:auto;
+		height:275px;
+		margin:0 auto;
 	}
 		.Info_user
 		{
@@ -133,12 +134,14 @@ img{ border:none !important;}
 	{
 		position:relative;
 		width:541px;
-		height:165px;
-		margin:auto;			
+		height:auto;
+		margin:0 auto;		
 	}
 	.Search	
 	{
 		position:relative;
+		height:120px;
+		width:auto;
 	}
 		.Search_text
 		{
@@ -187,12 +190,14 @@ img{ border:none !important;}
 		}
 		.Notes
 		{
+			position:relative;
 			width:537px;
 			height:41px;
 			margin:0 auto;
 			text-align:left;
 			padding-top:23px;
 			background:#f1f1f1;	
+			margin-bottom:2px;
 		}	
 		.Notes_text
 		{
@@ -217,6 +222,7 @@ img{ border:none !important;}
 			text-align:left;
 			padding-top:24px;
 			background:#f8f8f8;	
+			margin-bottom:2px;
 		}
 		.Product_name_text
 		{
@@ -240,7 +246,7 @@ img{ border:none !important;}
 			position:absolute;
 			top:16px;
 			left:485px;
-		}
+		}	
 .clear
 {
 	clear:both;
