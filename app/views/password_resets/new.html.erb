@@ -1,0 +1,18 @@
+<div class ="Box_Forgot">
+	<h1>Esqueceu a senha?</h1> 
+	<br />
+	<p>Digite seu e-mail abaixo para recuperar sua senha.</p>
+	<br />
+	<div id="flash_error_cadastro" style="display:none;"></div>
+	<%= form_tag password_resets_path, :remote => true,:id=>"frm_password_resets" do %>
+		<p><%= label "email", "", "E-mail" %>
+			<%= text_field_tag "email","e-mail", :onfocus => "javascript:check_text_onfocus(this)", :onblur => "javascript:check_text_onblur(this)"%>
+		</p>
+		<br />
+		<div class="Center">
+				<%= submit_tag "Voltar",:type=>"reset",:onclick=>"voltaConteudo()", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> 
+				<%= submit_tag "Enviar",:type=>"reset",:onclick=>"enviardaodos(this)",:id=>"btn_enviar_password",:class => "Bt_enviar"  %><br /><br />
+				<%= image_tag "loading.gif", :style => 'display:none;', :id => 'loading-forgot' %>
+		</div>
+	<% end %>
+</div>

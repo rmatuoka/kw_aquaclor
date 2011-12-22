@@ -1,0 +1,107 @@
+<% 
+	content_for :title do "Login" end
+%>
+<%content_for :head do%>
+<%= stylesheet_link_tag "login"%>
+<script>
+	var htmlold = "";
+	
+	function novoConteudo(){
+		jQuery('#flash_error_cadastro').hide();
+		htmlold = jQuery('#box_login').html();
+		if (jQuery('#flash_error_cadastro').show){
+			jQuery('#flash_error_cadastro').hide();
+		}
+		jQuery.ajax({
+			url: '/password_resets/new',
+		    type:'get',
+			beforeSend: function (){
+				jQuery('#loading-forgot').show();
+			},
+		    success: function(response){
+				jQuery('#loading-forgot').hide();
+				jQuery('#box_login').html(response);
+		    },
+		    error: function(){ 
+				alert('Falha ao carregar a página!') ;
+				jQuery('#loading-forgot').hide();
+			}
+		  })
+	}
+	
+	function enviardaodos(obj){
+		if (jQuery('#flash_error_cadastro').show){
+			jQuery('#flash_error_cadastro').hide();
+		}		
+		jQuery(obj).hide();
+		jQuery('#loading-forgot').show();
+		jQuery("#frm_password_resets").submit();
+	}
+
+	function voltaConteudo(){
+		jQuery('#box_login').html(htmlold); 
+		htmlold = "";		
+	}
+
+</script>
+<%end%>
+<div id="box_login">
+	<h1>Área Restrita</h1><br />
+	<p>Área Restrita. Para acessá-la faça seu login abaixo.</p><br />
+	<div id="flash_error_cadastro" style="display:none;"></div>
+	<%= form_for @user_session, :remote => true do |f| %>
+		<div id="flash_error_login" style="display:none;"></div>
+		<p>
+			<%= f.label :email, "Email" %><br />
+			<%= f.text_field :email %>
+		</p>
+		<p>
+			<%= f.label :password, "Senha" %><br />
+			<%= f.password_field :password %>
+		</p>
+		<br />
+		<p><%= f.submit "Enviar", :class => "Bt_enviar" %></p>
+		<%= image_tag "loading.gif", :style => 'display:none;', :id => 'loading-forgot' %>
+		<br />
+		<p class="EsqueciSenha">
+			<%= link_to "Esqueceu a senha? Clique aqui", "#", :onclick=>"novoConteudo()" %>
+		</p>
+	<% end %>
+</div>
+<%if !flash[:temerro] %>
+	<%if flash[:error] %>
+	<script>
+		//window.location.href = "<%= login_path %>";
+		jQuery('#flash_error_cadastro').removeClass('flash_ops').addClass('flash_ok');
+		jQuery('#flash_error_cadastro').show();
+		erro = "";
+		erro += "<%= escape_javascript(image_tag("img_ok.png", :id=>"Box_warning_img"))%>";	
+		erro += "<div class='Box_warning_text'>";
+		erro += "	<h2>Ok!</h2>";
+		erro += "	<p><%= flash[:error];%></p>";
+		erro += "<br /><br />"
+		erro +=	"</div>";
+		erro += "<div class='clear'></div>";	
+		jQuery('#flash_error_cadastro').html(erro);
+		jQuery('#loading-forgot').hide();
+	</script>	
+	<%end%>
+<%else%>
+	<%if flash[:error] %>
+	<script>
+		jQuery('#flash_error_cadastro').removeClass('flash_ok').addClass('flash_ops');
+		jQuery('#flash_error_cadastro').show();
+		erro = "";
+		erro += "<%= escape_javascript(image_tag("img_ops.png", :id=>"Box_warning_img"))%>";	
+		erro += "<div class='Box_warning_text'>";
+		erro += "	<h2>Ops!</h2>";
+		erro += "	<p><%= flash[:error];%></p>";
+		erro += "<br /><br />"
+		erro +=	"</div>";
+		erro += "<div class='clear'></div>";
+		jQuery('#flash_error_cadastro').html(erro);
+		jQuery('#loading-forgot').hide();
+		jQuery('#btn_enviar_password').show();
+	</script>
+	<%end%>
+<%end%>

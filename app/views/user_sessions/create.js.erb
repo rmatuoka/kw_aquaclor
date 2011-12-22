@@ -1,0 +1,15 @@
+<%if !flash[:error].blank?%>
+	jQuery('#flash_error_cadastro').addClass('flash_ops');
+	jQuery('#flash_error_cadastro').show();
+	erro = "";
+	erro += "<%= escape_javascript(image_tag("img_ops.png", :id=>"Box_warning_img"))%>";	
+	erro += "<div class='Box_warning_text'>";
+	erro += "	<h2>Ops!</h2>";
+	erro += "	<p><%= flash[:error];%></p>";
+	erro += "<br /><br />"
+	erro +=	"</div>";
+	erro += "<div class='clear'></div>";
+	jQuery('#flash_error_cadastro').html(erro);
+<%else%>
+	window.location.href = "<%= login_path %>";
+<%end%>

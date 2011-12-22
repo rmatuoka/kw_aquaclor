@@ -1,0 +1,34 @@
+<% 
+	content_for :title do "Usuários" end
+%>
+<div id="search">
+<p>Informe o nome, sobrenome ou e-mail do usuário.</p>
+<%=form_tag '/admin/users/search', :method => :get, :name=>"formkeyword"%>
+	<%=text_field_tag :keyword, nil ,:style => "width:400px;"%>
+	<%=submit_tag "Buscar", :class => "Bt_enviar"%>
+</form>
+<br><br>
+</div>
+
+<table>
+  <tr>
+    <th width="200px">Nome</th>
+    <th width="200px">Sobrenome</th>
+	<th width="200px">Email</th>
+  </tr>
+  <% for user in @users %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.email%></td>
+      <td><%= link_to "Show", admin_user_path(user) %></td>
+      <td><%= link_to "Edit", edit_admin_user_path(user) %></td>
+      <td><%= link_to "Destroy", admin_user_path(user), :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<%= will_paginate @users %>
+
+<script>
+	document.getElementById('keyword').focus();
+</script>

@@ -1,5 +1,21 @@
 KwAquaclor::Application.routes.draw do
-  root :to => "home#index"
+
+  #Inicio do namespace Admin
+  namespace(:admin){
+    resources :static_contents
+    resources :users do
+      collection do
+        get 'search'
+      end
+    end
+    
+    root :to => "static_contents#index"
+  }
+  #Final do namespace Admin
+  
+  resources :user_sessions
+  resources :users
+  resources :password_resets
   
   resources :clorador
   resources :ph_clorador
@@ -10,6 +26,12 @@ KwAquaclor::Application.routes.draw do
 	resources :users
 	resources :dashboard
 	resources :cnpj
+
+  match 'cadastro' => "users#new"
+  match 'login' => 'user_sessions#new'  
+  match 'logout' => 'user_sessions#destroy'	
+	
+  root :to => "home#index"	
   end
   
   # The priority is based upon order of creation:

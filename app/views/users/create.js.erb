@@ -1,0 +1,20 @@
+<%if !@user.errors.blank?%>
+	jQuery('#flash_error_cadastro').addClass('flash_ops');
+	jQuery('#flash_error_cadastro').show();
+	erro = "";
+	erro += "<%= escape_javascript(image_tag("img_ops.png", :id=>"Box_warning_img"))%>";	
+	erro += "<div class='Box_warning_text'>";
+	erro += "	<h2>Ops!</h2>";
+	erro += "	<p>";
+	erro += "<%= escape_javascript(raw("Nome "+ @user.errors[:name].to_s + " <br/ >")) if !@user.errors[:name].to_s.blank?%>";
+	erro += "<%= escape_javascript(raw("Sobrenome " + @user.errors[:last_name].to_s + "<br/ >")) if !@user.errors[:last_name].empty?%> ";
+	erro += "<%= escape_javascript(raw("As senhas não conferem! <br />")) if !@user.errors[:password].empty?%>";
+	erro += "<%= escape_javascript(raw("E-mail já cadastrado ou em branco! <br>")) if !@user.errors[:email].empty?%>";
+	erro += 	"</p>";
+	erro += "<br /><br />"
+	erro +=	"</div>";
+	erro += "<div class='clear'></div>";
+	jQuery('#flash_error_cadastro').html(erro);
+<%else%>
+	window.location.href = "<%= login_path %>";
+<%end%>
