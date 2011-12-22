@@ -24,8 +24,12 @@ KwAquaclor::Application.routes.draw do
 
   namespace(:revendas) do
 	resources :users
-	resources :dashboard
-	resources :cnpj
+  resources :dashboard do
+    collection do
+      get 'busca'
+    end
+  end
+  resources :cnpj
 
   match 'cadastro' => "users#new"
   match 'login' => 'user_sessions#new'  
