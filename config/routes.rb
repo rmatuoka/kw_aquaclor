@@ -33,7 +33,7 @@ KwAquaclor::Application.routes.draw do
     resources :cnpj    
   end
 
-  match 'cadastro' => "users#new"
+  match 'cadastro' => "revendas/users#new"
   match 'login' => 'user_sessions#new'  
   match 'logout' => 'user_sessions#destroy'	
 	

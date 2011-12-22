@@ -1,0 +1,143 @@
+<%content_for :head do%>
+<%= stylesheet_link_tag "cadastro"%>
+<%=javascript_include_tag "jquery.validate.min.js"%>
+<%=javascript_include_tag "meusmetodos.js"%>
+<%#=javascript_include_tag "jquery.meio.mask.js"%>
+	<script>
+		jQuery(document).ready(function(){		
+    	jQuery('#new_user').validate({
+        rules: {
+            "user[name]": {
+                required: true,
+                minlength: 2
+            },
+			"user[email]": {
+                required: true,
+                email: true
+            },
+			"user[password]":{
+				required:true,
+				minlength: 6
+			},			
+			"user[password_confirmation]": {
+                required: true,
+                minlength: 6,
+				equalTo: "#user_password"
+            }
+			
+        },
+        messages: {
+            "user[name]":{
+				required: "Preencha o seu nome",
+				minlength: 	"Mínimo de 2 caracteres"
+			},
+			"user[email]":{
+				required: "Preencha o seu email",
+				email: "Informe um email válido"	
+			},
+			"user[password]":{
+				required: "Preencha com uma senha",
+				minlength: "Mínimo de 6 caracteres"	
+			},
+			"user[password_confirmation]":{
+				required: "Preencha com a confirmação",
+				minlength: "Mínimo de 6 caracteres",
+				equalTo: "Confirmação não é igual a senha"	
+			}
+        }
+    });
+});
+	</script>
+
+<% end %>
+
+<div id="flash_error_cadastro" style="display:none;"></div>
+
+
+
+
+
+
+
+<div class="Cadastro_box">
+	<%= form_for @user, :remote => true do |f| %>
+		<div id="Cad_Box">
+			<div class="Cad_item_box">
+					<%= f.label :name, raw('Nome <br /> Completo') %>
+				<div class="Login_input">
+					<%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %>
+					<%= f.text_field :name %>
+				</div>
+			</div>
+
+			<div class="Cad_item_box">
+					<%= f.label :address, 'Endereço' %>
+				<div class="Login_input_endereco">
+					<%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %>
+					<%= f.text_field :address %>
+				</div>
+			</div>		
+
+			<div class="Cad_item_box">
+					<%= f.label :date_birth, raw('Data de<br />Nascimento') %>
+				<div class="Login_input_data_nasc">
+					<%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %>
+		    		<%= f.date_select :date_birth, { :start_year => 1950, :end_year => Time.now.year}%>
+				</div>
+			</div>
+
+			<div class="Cad_item_box">
+				<%= f.label :civil_status, 'Estado Civil' %>
+				<div class="Login_input_est_civil">
+					<%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %>
+					<%= f.select :civil_status, options_for_select(["Solteiro(a)", "Casado(a)", "Separado(a)", "Divorciado(a)", "Viúvo(a)"])%>
+				</div>
+			</div>
+		
+		
+			<div class="Cad_item_box">
+				<%= f.label :phone, "Telefone" %>
+				<div class="Login_input_telefone">
+					<%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %>
+					<%= f.text_field :phone %>
+				</div>
+			</div>
+
+			<div class="Cad_item_box">
+				<%= f.label :email, "E-mail" %>
+				<div class="Login_input_email">
+					<%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %>
+					<%= f.text_field :email %>
+				</div>
+			</div>
+
+			<div class="Cad_item_box">
+				<%= f.label :password, "Senha" %>
+				<div class="Login_input_email">
+					<%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %>
+					<%= f.password_field :password %>
+				</div>
+			</div>
+				
+			<div class="Cad_item_box">
+				<%= f.label :password_confirmation, raw("Confirmar <br /> Senha") %>
+				<div class="Login_input">
+					<%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %>
+					<%= f.password_field :password_confirmation %>
+				</div>
+			</div>		
+		</div>		
+		<div class="Cad_item_text_area_box">
+			<label>Regulamento</label><div class="Text_area_input"><%= image_tag("text_area_line_detail.png", :class=>"Img_line_textarea_align") %>
+			<textarea>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si.
+			</textarea></div>
+			<br />	
+			<div class="checkbox_inp">
+				<input type="checkbox" /><span class="label_checkbox">Aceito os termos.</span>
+			</div>	
+		</div>		
+	
+		<%= image_submit_tag ("bt_cadastrar_login.png", :class=>"bt_cadastrar_align")  %>																				
+	<% end %>
+</div>

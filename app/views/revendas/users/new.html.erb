@@ -25,40 +25,7 @@
 <div id="Box_left">
 <h1 class="Title_cadastro">Lorem Ipsum</h1>
     <p class="Text_cadastro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si.</p>
-	<div class="Cadastro_box">
-		<form>
-			<div class="Cad_item_box">
-				<label>Nome<br />Completo</label><div class="Login_input"><%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %><input type="text" value="000.000.000-00"/></div>
-				
-			</div>
-			<div class="Cad_item_box">
-				<label>Endereço</label><div class="Login_input_endereco"><%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %><input type="text" value="000.000.000-00"/></div>
-			</div>
-			<div class="Cad_item_box">
-				<label>Data de<br />Nascimento</label><div class="Login_input_data_nasc"><%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %><input type="text" value="000.000.000-00"/></div>
-			</div>
-			<div class="Cad_item_box">
-				<label>Estado Civil</label><div class="Login_input_est_civil"><%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %><input type="text" value="000.000.000-00"/></div>
-			</div>
-			<div class="Cad_item_box">
-				<label>Telefone</label><div class="Login_input_telefone"><%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %><input type="text" value="000.000.000-00"/></div>
-			</div>
-			<div class="Cad_item_box">
-				<label>E-mail</label><div class="Login_input_email"><%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %><input type="text" value="000.000.000-00"/></div>
-			</div>
-			<div class="Cad_item_text_area_box">
-				<label>Regulamento</label><div class="Text_area_input"><%= image_tag("text_area_line_detail.png", :class=>"Img_line_textarea_align") %>
-				<textarea>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla consectetur massa si.
-				</textarea></div>
-				<br />
-				<div class="checkbox_inp">
-					<input type="checkbox" /><span class="label_checkbox">Aceito os termos.</span>
-				</div>	
-			</div>																				
-			<%=link_to  image_tag("bt_cadastrar_login.png", :class=>"bt_cadastrar_align"),"#" %>			
-		<form>
-	</div> 
+	<%= render 'form' %>
 </div>
 <div id="Box_right">
     <div id="Box_ondeencontrar">
@@ -67,9 +34,9 @@
         <p class="Text_2_int">Selecione as informações de sua localização abaixo e encontre as revendas mais próximas.</p>
         <p class="Title_4_int"><a href="./onde_encontrar">Clique aqui!</a></p><br /><br /><br /><br /><br /><br />
         <h1 class="Title_5_int">Veja também:</h1>
-        <a href="./ph_clorador"><img src="../images/img_aquaclor_ph_cl.png" width="205" height="61" class="img_align_aqua_box_left" /></a>
+		<%= link_to image_tag("img_aquaclor_ph_cl.png", :width=>"205", :height=>"61", :class=>"img_align_aqua_box_left"), ph_clorador_index_path%>
 		<br /><br /><br />
-		<a href="./clorador"><img src="../images/img_aquaclor_clorador.png" width="205" height="61" class="img_align_aqua_box_left" /></a>
+		<%= link_to image_tag("img_aquaclor_clorador.png", :width=>"205", :height=>"61", :class=>"img_align_aqua_box_left"), clorador_index_path%>
     </div>   
 
 </div>

@@ -5,10 +5,9 @@ class User < ActiveRecord::Base
   
   acts_as_authorization_subject
   
-  scoped_search :on => [:name, :last_name, :email]
+  scoped_search :on => [:name, :email]
   
   validates_presence_of :name, :message=> " - preencha o campo!"
-  validates_presence_of :last_name, :message=> " - preencha o campo!"
   validates_presence_of :email, :message=> " - preencha o campo!"
   
   attr_writer :role

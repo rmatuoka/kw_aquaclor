@@ -1,6 +1,6 @@
 class UserSessionsController < ApplicationController
   before_filter :navegadorie6
-  layout "admin"
+  layout "blank"
   
   def new
     @user_session = UserSession.new
