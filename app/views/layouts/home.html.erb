@@ -5,7 +5,27 @@
 <title>Aquaclor - Home</title>
 	<%= stylesheet_link_tag "template" %>
 	<%= javascript_include_tag "jquery-1.6.4.min.js" %>
+	<%= javascript_include_tag "jquery.fancybox-1.3.4.pack.js" %>
+	<%= javascript_include_tag "jquery.easing-1.3.pack.js" %>
+	<%= javascript_include_tag "jquery.mousewheel-3.0.4.pack.js" %>
+	<%= stylesheet_link_tag "jquery.fancybox-1.3.4"%>	
  	<%= csrf_meta_tag %>
+<script>
+$(document).ready(function() {
+	$("#Header_Revendedor > a").fancybox({ 
+		'titleShow' : false, 
+		'autoscale' : false, 
+		'transitionIn' : 'elastic', 
+		'transitionOut' : 'elastic',
+		'hideOnContentClick' : false,
+		'autoDimensions' : false,
+		'width' : 650,
+		'height' : 310,
+		'type' : 'iframe',
+		'scrolling' : 'no'
+	});
+});
+</script>
 </head>
 
 <body>
