@@ -19,7 +19,12 @@ KwAquaclor::Application.routes.draw do
   
   resources :clorador
   resources :ph_clorador
-  resources :onde_encontrar
+  resources :onde_encontrar do
+    collection do
+      post 'resultados'
+      get 'popula_cidades'
+    end
+  end
   resources :home
 
   namespace(:revendas) do

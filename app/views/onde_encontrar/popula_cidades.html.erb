@@ -1,0 +1,7 @@
+<%=select("pessoa","cidade", @Cidades.map {|c| c.city}, {:include_blank => :true})%>
+
+<script>
+	$("#pessoa_cidade").change(function(){
+		$("form").submit();
+	});
+</script>
