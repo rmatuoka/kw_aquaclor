@@ -1,0 +1,22 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "cadastro"%>
+<%end%>
+
+<div id="Box_left">
+<h1 class="Title_cadastro">Editar Cadastro</h1>
+    <p class="Text_cadastro">Preencha o formulário para alterar o seu cadastro.</p>
+	<%= render 'form' %>
+</div>
+<div id="Box_right">
+    <div id="Box_ondeencontrar">
+    <br />
+        <h1 class="Title_3_int_blue_big">Onde encontrar?</h1>
+        <p class="Text_2_int">Selecione as informações de sua localização abaixo e encontre as revendas mais próximas.</p>
+        <p class="Title_4_int"><a href="./onde_encontrar">Clique aqui!</a></p><br /><br /><br /><br /><br /><br />
+        <h1 class="Title_5_int">Veja também:</h1>
+		<%= link_to image_tag("img_aquaclor_ph_cl.png", :width=>"205", :height=>"61", :class=>"img_align_aqua_box_left"), ph_clorador_index_path%>
+		<br /><br /><br />
+		<%= link_to image_tag("img_aquaclor_clorador.png", :width=>"205", :height=>"61", :class=>"img_align_aqua_box_left"), clorador_index_path%>
+    </div>   
+
+</div>

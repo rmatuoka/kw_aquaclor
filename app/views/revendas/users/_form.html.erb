@@ -52,17 +52,16 @@
 <% end %>
 
 <div id="flash_error_cadastro" style="display:none;"></div>
-
-
-
-
-
-
-
 <div class="Cadastro_box">
-	<%= form_for @user, :remote => true do |f| %>
+	<%= form_for [:revendas, @user], :remote => true do |f| %>
 		<div id="Cad_Box">
 			<div class="Cad_item_box">
+				<%if current_user%>
+					<%= f.hidden_field :reseller_id, :value => current_user.reseller.id%>
+				<%else%>
+					<%= f.hidden_field :reseller_id, :value => session[:reseller_id]%>
+				<%end%>
+					
 					<%= f.label :name, raw('Nome <br /> Completo') %>
 				<div class="Login_input">
 					<%= image_tag("img_detal_cnpj.png", :class=>"Img_line_align") %>
