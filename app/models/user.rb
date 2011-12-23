@@ -1,4 +1,10 @@
 class User < ActiveRecord::Base
+  belongs_to :reseller
+  
+  has_many :product_receipts_users
+  has_many :products_receipts, :through => :product_receipts_users
+  
+  
   acts_as_authentic do |c|
     c.login_field = 'email'
   end

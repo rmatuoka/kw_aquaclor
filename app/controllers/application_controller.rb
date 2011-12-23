@@ -35,4 +35,10 @@ class ApplicationController < ActionController::Base
        redirect_to login_path
      end
    end
+   
+  def check_login
+    if !current_user
+      redirect_to root_path
+    end
+  end
 end
