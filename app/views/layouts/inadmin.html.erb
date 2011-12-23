@@ -9,7 +9,16 @@
 jQuery.noConflict();
 </script>
 <%= javascript_include_tag "menuadmin.js" %>
+<%= javascript_include_tag "jquery.tablesorter.min.js" %>
 <%=yield :head%>
+<script>
+jQuery(document).ready(function() 
+    { 
+	//	jQuery("li:first.parent > a").trigger('click');
+        jQuery("table").tablesorter(); 
+    } 
+);
+</script>
 </head>
 <body>
 	<div id="General">
@@ -27,7 +36,8 @@ jQuery.noConflict();
 				</div>
 			</div>
 			<div id="Logo">
-				<%= image_tag("logo_default.png", :width=>"148", :height=>"83")%>
+				<%= image_tag("logo_aquaclor.png", :width=>"492", :height=>"80") %>
+				<%#= image_tag("logo_default.png", :width=>"148", :height=>"83")%>
 			</div>
 		</div>
 		<div id="Content">
@@ -35,23 +45,17 @@ jQuery.noConflict();
 				<div id="Item_category" >
 					<div id="Item_content">
 						<ul id="menu">
-							<li class="parent"><a href="#" title=""><h3>Empresas</h3></a>
+							<li class="parent aberto"><a href="#" title=""><h3>Notas</h3></a>
 								<ul class="sub-menu">
-									<li>Empresa 1</li>
-									<li>Empresa 2</li>
-									<li>Empresa 3</li>
-									<li>Empresa 4</li>
-									<li>Empresa 5</li>
+									<li><%= link_to "Cadastro de notas","#",:onclick=>"alert('Em Desenvolvimento!')"%></li>
 								</ul>
 							</li>
-							<%if User.find(current_user.id).has_role? :admin %>
-							<li class="parent"><a href="#" title=""><h3>Ajuste do Site</h3></a>
+							<li class="parent aberto"><a href="#" title=""><h3>Ajuste do Site</h3></a>
 								<ul class="sub-menu">
 									<li><%= link_to "Gerenciar Usuários",admin_users_path%></li>
+									<li><%= link_to "Gerenciar Revendas",admin_resellers_path%></li>
 								</ul>
 							</li>
-							<%end%>
-
 						</ul>
 					</div>
 				</div>

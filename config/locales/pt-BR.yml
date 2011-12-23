@@ -184,6 +184,15 @@
       even: "deve ser par"
 
   activerecord:
+    attributes:
+        _all:
+          created_at: "Data de criação"
+          updated_at: "Data de atualização"
+        reseller:
+          name: "Nome"
+          cnpj: "Cnpj"
+          state: "Estado" 
+          city: "Cidade"     
     errors:
       template:
         header:

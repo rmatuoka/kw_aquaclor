@@ -3,6 +3,7 @@ KwAquaclor::Application.routes.draw do
   #Inicio do namespace Admin
   namespace(:admin){
     resources :static_contents
+    resources :resellers
     resources :users do
       collection do
         get 'search'

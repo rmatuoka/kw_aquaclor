@@ -1,0 +1,48 @@
+<% @reseller.name %>
+
+<h1><%= @reseller.name%></h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+<p>
+  <strong>Nome:</strong>
+  <%= @reseller.name %>
+</p>
+<p>
+  <strong>Endereço:</strong>
+  <%= @reseller.address %>
+</p>
+<p>
+  <strong>Número:</strong>
+  <%= @reseller.number %>
+</p>
+<p>
+  <strong>Bairro:</strong>
+  <%= @reseller.neibourhood %>
+</p>
+<p>
+  <strong>Cidade:</strong>
+  <%= @reseller.city %>
+</p>
+<p>
+  <strong>Estado:</strong>
+  <%= @reseller.state %>
+</p>
+<p>
+  <strong>Telefone:</strong>
+  <%= @reseller.phone %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= @reseller.email %>
+</p>
+<p>
+  <strong>Cnpj:</strong>
+  <%= @reseller.cnpj %>
+</p>
+<br />
+<br />
+<br />
+<p>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_resellers_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+</p>
