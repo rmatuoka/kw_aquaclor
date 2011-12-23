@@ -1,9 +1,12 @@
 KwAquaclor::Application.routes.draw do
 
+  namespace(:admin){ resources :products }
+
   #Inicio do namespace Admin
   namespace(:admin){
     resources :static_contents
     resources :resellers
+    resources :products 
     resources :users do
       collection do
         get 'search'

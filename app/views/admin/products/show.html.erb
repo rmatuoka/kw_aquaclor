@@ -1,0 +1,20 @@
+<% @product.name %>
+
+<h1><%= @product.name%></h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+<p>
+  <strong>Nome:</strong>
+  <%= @product.name %>
+</p>
+<p>
+  <strong>Ativo?</strong>
+  <%= print_active(@product.active) %>
+</p>
+<br />
+<br />
+<br />
+<p>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_products_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+</p>

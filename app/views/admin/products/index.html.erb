@@ -1,0 +1,28 @@
+<% title "Produtos" %>
+
+<h1>Produtos</h1><br />
+<p>Verifique abaixo a lista dos produtos cadastrados no sistema.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_product_path+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
+  <tr>
+    <th style="width:30%;">Name</th>
+    <th style="width:30%;">Ativo ?</th>
+    <th colspan="3" style="width:20%;">Ações</th>
+</tr>
+</thead> 
+<tbody>
+  <% for product in @products %>
+    <tr <%='class=notactive' if !product.active%>>
+      <td><%= product.name %></td>
+      <td><%= print_active(product.active) %></td>
+      <td><%= link_to "Visualizar", [:admin, product] %></td>
+      <td><%= link_to "Editar", edit_admin_product_path(product) %></td>
+      <td><%= link_to "Excluir", [:admin, product], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

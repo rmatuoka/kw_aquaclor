@@ -1,0 +1,17 @@
+<div id="Box_form">
+<%= form_for [:admin, @product] do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+	<%= f.label :active, "Ativo?"%>
+	<%= f.check_box :active  %>
+  </p>
+  <br />
+  <br />
+  <br />
+  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_products_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+<% end %>
+</div>

@@ -9,8 +9,8 @@
   <thead> 
   <tr>
     <th style="width:50%;">Nome</th>
-    <th style="width:30%;">Cnpj</th>
-    <th colspan="3" style="width:20%;">Ações</th>
+    <th style="width:20%;">Cnpj</th>
+    <th colspan="4" style="width:30%;">Ações</th>
 </tr>
 </thead> 
 <tbody>
@@ -21,6 +21,7 @@
       <td><%= link_to "Visualizar", [:admin, reseller] %></td>
       <td><%= link_to "Editar", edit_admin_reseller_path(reseller) %></td>
       <td><%= link_to "Excluir", [:admin, reseller], :confirm => 'Are you sure?', :method => :delete %></td>
+      <td> | <%= link_to "Cadastrar Notas", "#" %></td>
     </tr>
   <% end %>
   </tbody>
