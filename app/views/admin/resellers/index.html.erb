@@ -1,0 +1,27 @@
+<% title "Revendas" %>
+
+<h1>Revendas</h1><br />
+<p>Verifique abaixo a lista das revendas cadastradas no sistema.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_reseller_path+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
+  <tr>
+    <th style="width:50%;">Nome</th>
+    <th style="width:30%;">Cnpj</th>
+    <th colspan="3" style="width:20%;">Ações</th>
+</tr>
+</thead> 
+<tbody>
+  <% for reseller in @resellers %>
+    <tr>
+      <td><%= reseller.name %></td>
+      <td><%= reseller.cnpj %></td>
+      <td><%= link_to "Visualizar", [:admin, reseller] %></td>
+      <td><%= link_to "Editar", edit_admin_reseller_path(reseller) %></td>
+      <td><%= link_to "Excluir", [:admin, reseller], :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

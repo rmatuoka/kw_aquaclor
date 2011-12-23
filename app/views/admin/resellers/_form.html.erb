@@ -1,0 +1,56 @@
+<div id="Box_form">
+<%= form_for [:admin, @reseller] do |f| %>
+  <%= 	f.error_messages :header_message => "Revenda Inválida !",
+	  :message => "Os campos abaixo estão com erro:",
+	  :header_tag => :h3 %>
+  <p>
+    <%= f.label :name, "Nome" %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :address, "Endereço" %>
+    <%= f.text_field :address %>
+  </p>
+  <p>
+    <%= f.label :number, "Número" %>
+    <%= f.text_field :number %>
+  </p>
+  <p>
+    <%= f.label :neibourhood, "Bairro" %>
+    <%= f.text_field :neibourhood %>
+  </p>
+  <p>
+    <%= f.label :city, "Cidade" %>
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :state, "Estado" %>
+
+	<%= f.select :state, options_for_select([["AC", "AC"], ["AL","AL"], ["AP", "AP"],
+	["AM", "AM"], ["BA", "BA"], ["CE", "CE"],
+	["DF", "DF"], ["ES", "ES"], ["GO", "GO"],
+	["MA", "MA"], ["MT", "MT"], ["MS", "MS"],
+	["MG", "MG"], ["PA", "PA"], ["PB", "PB"],
+	["PR", "PR"], ["PE", "PE"], ["PI", "PI"],
+	["RJ", "RJ"], ["RN", "RN"], ["RS", "RS"],
+	["RO", "RO"], ["RR", "RR"], ["SC", "SC"],
+	["SP", "SP"], ["SE", "SE"], ["TO", "TO"]]) %>
+  </p>
+  <p>
+    <%= f.label :phone, "Telefone" %>
+    <%= f.text_field :phone %>
+  </p>
+  <p>
+    <%= f.label :email, "Email" %>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :cnpj, "Cnpj" %>
+    <%= f.text_field :cnpj %>
+  </p>
+  <br />
+  <br />
+  <br />
+  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_resellers_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+<% end %>
+</div>

@@ -47,6 +47,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    mocha (0.9.12)
     mongrel (1.1.5)
       cgi_multipart_eof_fix (>= 2.4)
       daemons (>= 1.0.3)
@@ -90,6 +91,7 @@ DEPENDENCIES
   browser
   jquery-rails (>= 1.0.12)
   mail
+  mocha
   mongrel
   mysql2 (< 0.3)
   nifty-generators

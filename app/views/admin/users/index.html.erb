@@ -10,22 +10,25 @@
 <br><br>
 </div>
 
-<table>
+<table cellspacing="0" class="tablesorter">
+  <thead> 
   <tr>
-    <th width="200px">Nome</th>
-    <th width="200px">Sobrenome</th>
-	<th width="200px">Email</th>
+    <th width="width:40%;">Nome</th>
+	<th width="width:40%;">Email</th>
+	<th colspan="3" style="width:20%;">Ações</th>
   </tr>
+</thead> 
+<tbody>
   <% for user in @users %>
     <tr>
       <td><%= user.name %></td>
-      <td><%= user.last_name %></td>
       <td><%= user.email%></td>
-      <td><%= link_to "Show", admin_user_path(user) %></td>
-      <td><%= link_to "Edit", edit_admin_user_path(user) %></td>
-      <td><%= link_to "Destroy", admin_user_path(user), :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Visualizar", admin_user_path(user) %></td>
+      <td><%= link_to "Editar", edit_admin_user_path(user) %></td>
+      <td><%= link_to "Excluir", admin_user_path(user), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
+  </tbody>
 </table>
 <%= will_paginate @users %>
 

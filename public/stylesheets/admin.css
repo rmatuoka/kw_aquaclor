@@ -13,6 +13,7 @@
 {
 	position:relative;
 	width:100%;
+	min-width:1200px;
 	min-height:212px;
 	height:auto;
 	overflow:hidden;
@@ -95,7 +96,12 @@
 		width:auto;
 		min-height:800px;
 		height:auto;
+		padding-top: 30px;
 	}
+		#General #Content a 
+		{
+			color:#aaaaaa;
+		}
 		#General #Content #Left_box
 		{
 			position:relative;
@@ -104,6 +110,19 @@
 			min-height:800px;
 			height:auto;
 		}
+		#General #Content #Left_box .Bt_enviar_left
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:bold;
+			/*color:#fff;*/
+			cursor:pointer;
+			text-decoration:none;
+		}
+			#General #Content #Left_box .Bt_enviar_left:hover
+			{
+				text-decoration:underline;
+			}
 	
 			#General #Content #Left_box #Item_category
 			{
@@ -136,106 +155,68 @@
 					color:#999999;					
 					width:220px;
 					height:auto;	
-				}
-				#General #Content #Left_box #Item_category #Item_content ul{
-					list-style: none;
-				}
-			
-				#General #Content #Left_box #Item_category #Item_content ul#menu
-				{
-					position:relative;
-					display:block;
-					float:left;
-					height:300px;
-					width: 220px;
-				}
-					#General #Content #Left_box #Item_category #Item_content ul#menu li
-					{
-						position:relative;
-						text-decoration:none;
-						font-family:Verdana, Geneva, sans-serif;
-						font-size:12px;
-						padding: 4px 0px;
+				}		
+					#General #Content #Left_box #Item_category #Item_content ul{
+						list-style: none;
 					}
-						#General #Content #Left_box #Item_category #Item_content ul#menu li a
-						{
-							display:block;
-						}
-						#General #Content #Left_box #Item_category #Item_content ul#menu li.parent
-						{
-							margin-bottom:10px;
-						}	
-							#General #Content #Left_box #Item_category #Item_content ul#menu li.parent > a
-							{
-								text-decoration:none;
-								background: transparent url(../images/img_line_up.png) right bottom no-repeat;
-								padding-bottom: 15px;
-							}
-							#General #Content #Left_box #Item_category #Item_content ul#menu li.aberto > a
-							{
-								background-color:blue; /* Aqui vai a imagem para fechar*/
-								background: transparent url(../images/img_line_down.png) right bottom no-repeat;
-							}												
-							#General #Content #Left_box #Item_category #Item_content ul#menu li ul.sub-menu
-							{
-								margin-left:10px;
-								display:none;
-							}
-								#General #Content #Left_box #Item_category #Item_content ul#menu li ul.sub-menu li a
-								{
-									position:relative;
-									text-decoration:none;
-									font-family:Verdana, Geneva, sans-serif;
-									color:#999999;
-									font-size:12px;
-								}
-									#General #Content #Left_box #Item_category #Item_content ul#menu li ul.sub-menu li a:hover
-									{
-										position:relative;
-										text-decoration:underline;
-										font-family:Verdana, Geneva, sans-serif;
-										color:#1AD714;
-										font-size:12px;
-									}
-/*				
-					#General #Content #Left_box #Item_category #Item_content Sub_ul
+				
+					#General #Content #Left_box #Item_category #Item_content ul#menu
 					{
 						position:relative;
 						display:block;
 						float:left;
 						height:300px;
-						background:#000;
-					}			
-					#General #Content #Left_box #Item_category #Item_content ul
-					{
-						position:relative;
-						display:block;
-						float:left;
+						width: 220px;
 					}
-						#General #Content #Left_box #Item_category #Item_content ul li
+						#General #Content #Left_box #Item_category #Item_content ul#menu li
 						{
 							position:relative;
 							text-decoration:none;
 							font-family:Verdana, Geneva, sans-serif;
 							font-size:12px;
+							padding: 4px 0px;
 						}
-							#General #Content #Left_box #Item_category #Item_content ul li a
+							#General #Content #Left_box #Item_category #Item_content ul#menu li a
 							{
-								position:relative;
-								text-decoration:none;
-								font-family:Verdana, Geneva, sans-serif;
-								color:#999999;
-								font-size:12px;
+								display:block;
+							}
+							#General #Content #Left_box #Item_category #Item_content ul#menu li.parent
+							{
+								margin-bottom:10px;
 							}	
-								#General #Content #Left_box #Item_category #Item_content ul li a:hover
+								#General #Content #Left_box #Item_category #Item_content ul#menu li.parent > a
 								{
-									position:relative;
-									text-decoration:underline;
-									font-family:Verdana, Geneva, sans-serif;
-									color:#1AD714;
-									font-size:12px;
-								}	
-	*/															
+									text-decoration:none;
+									background: transparent url(../images/img_line_down.png) right bottom no-repeat;
+									padding-bottom: 10px;
+								}
+								#General #Content #Left_box #Item_category #Item_content ul#menu li.aberto > a
+								{
+									background-color:blue; /* Aqui vai a imagem para fechar*/
+									background: transparent url(../images/img_line_up.png) right bottom no-repeat;
+								}												
+								#General #Content #Left_box #Item_category #Item_content ul#menu li ul.sub-menu
+								{
+									margin-left:10px;
+									/*display:none; Comentado para exibir os menus abertos!*/
+								}
+									#General #Content #Left_box #Item_category #Item_content ul#menu li ul.sub-menu li a
+									{
+										position:relative;
+										text-decoration:none;
+										font-family:Verdana, Geneva, sans-serif;
+										color:#999999;
+										font-size:12px;
+									}
+										#General #Content #Left_box #Item_category #Item_content ul#menu li ul.sub-menu li a:hover
+										{
+											position:relative;
+											text-decoration:underline;
+											font-family:Verdana, Geneva, sans-serif;
+											color:#1AD714;
+											font-size:12px;
+										}
+					
 		#General #Content #Right_box
 		{
 			position:relative;
@@ -243,6 +224,7 @@
 			width:70%;
 			min-height:800px;
 			height:auto;
+			padding-right: 5%;
 		}
 		#General #Content #Right_box .ls_arrow_align
 		{
@@ -318,14 +300,23 @@
 			color:#999999;
 			font-size:12px;
 			font-weight:normal;
+		}
+		#General #Content #Right_box #Box_form
+		{
+			width: 600px;
+			margin: auto;
 		}						
-			#General #Content #Right_box form
-			{
-				position:relative;
-				display:block;
-				padding:33px 0px 10px 33px;
-				text-align:center;
-			}			
+		#General #Content #Right_box form
+		{
+			position:relative;
+			display:block;
+			padding:33px 0px 10px 33px;
+			text-align:right;
+		}			
+		#General #Content #Right_box form p
+		{
+			margin-bottom:10px;
+		}
 		#General #Content #Right_box h1
 		{
 			position:relative;
@@ -333,7 +324,61 @@
 			font-size:20px;
 			font-weight:normal;
 			color:#999;
-		}					
+		}	
+		.Form_title
+		{
+			position:relative;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:20px;
+			font-weight:normal;
+			color:#999;
+			text-align:left;
+			margin-top:10px;
+			margin-bottom:10px;
+		}	
+		.Form_title2
+		{
+			position:relative;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:20px;
+			font-weight:normal;
+			color:#999;
+			text-align:left;
+			margin-top:10px;
+			margin-bottom:10px;
+		}
+		.Form_p
+		{
+			position:relative;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:20px;
+			font-weight:normal;
+			color:#999;
+			text-align:left;
+			margin-bottom:5px;
+		}
+		.Form_p2
+		{
+			position:relative;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:20px;
+			font-weight:normal;
+			color:#999;
+			text-align:left;
+			margin-bottom:10px;
+		}
+	
+		.Form_buttons
+		{
+			position:relative;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:20px;
+			font-weight:normal;
+			color:#999;
+			text-align:left;
+			margin-top:5px;
+			margin-bottom:5px;
+		}	
 		#General #Content #Right_box p
 		{
 			position:relative;
@@ -392,7 +437,7 @@
 		#General #Content #Right_box form input
 		{
 			position:relative;
-			width:400px;
+			width:390px;
 			height:27px;
 			font-family:Verdana, Geneva, sans-serif;
 			font-size:12px;
@@ -404,7 +449,25 @@
 			-webkit-border-radius: 10px; /* Implementação para browsers que renderizam via webkit */
 			behavior: url(PIE.htc);/* Comportamento adicionado para renderização das prop no ie7 e 8*/
 			background:#EEE;
+			padding:0px 5px 0px 5px;
 		}	
+		#General #Content #Right_box form .input_radio
+		{
+			position:relative;
+			width: 15px;
+			height: 15px;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size:12px;
+			font-weight:normal;
+			color:#999;
+			border:none;
+			border-radius: 10px; /* Implementação W3C */
+			-moz-border-radius: 10px; /* Implementação Mozilla */
+			-webkit-border-radius: 10px; /* Implementação para browsers que renderizam via webkit */
+			behavior: url(PIE.htc);/* Comportamento adicionado para renderização das prop no ie7 e 8*/
+			background:#EEE;
+			margin-left:15px;
+		}		
 		#General #Content #Right_box #Select
 		{
 			position:relative;
@@ -419,25 +482,26 @@
 			-moz-border-radius: 10px; /* Implementação Mozilla */
 			-webkit-border-radius: 10px; /* Implementação para browsers que renderizam via webkit */
 			behavior: url(PIE.htc);/* Comportamento adicionado para renderização das prop no ie7 e 8*/
-			background:#EEE;;	
+			background:#EEE;
 			cursor: pointer;
 		}		
 		#General #Content #Right_box textarea
 		{
-			position:relative;
-        	width:220px;
-			height:158px;	
-			margin-left:35px;
-			font-family:Verdana, Geneva, sans-serif;
-			font-size:12px;
-			font-weight:normal;
-			color:#999;
+			position: relative;
+			width: 380px;
+			height: 143px;
+			margin-left: 35px;
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 12px;
+			font-weight: normal;
+			color: #999;
 			cursor: pointer;
-			border-radius: 10px; /* Implementação W3C */
-			-moz-border-radius: 10px; /* Implementação Mozilla */
-			-webkit-border-radius: 10px; /* Implementação para browsers que renderizam via webkit */
-			behavior: url(PIE.htc);/* Comportamento adicionado para renderização das prop no ie7 e 8*/
-			background:#EEE;;;
+			border-radius: 10px;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			behavior: url(PIE.htc);
+			background: #EEE;
+			padding: 10px 10px 5px 10px;
 		}	
 		#General #Content #Right_box .Bt_enviar
 		{
@@ -515,7 +579,39 @@
 				font-size:12px;
 				font-weight:normal;
 				color:#666;			
-			}						
+			}
+			.tablesorter{
+				width:100%; 
+				margin-top:10px;
+			}
+				.tablesorter th{
+					text-align:left; 
+					background-color:#CCC;
+				}
+				.tablesorter th.header { 
+				    background-image: url(../images/bg.gif);     
+				    cursor: pointer; 
+				    font-weight: bold; 
+				    background-repeat: no-repeat; 
+				    background-position: center left; 
+				    padding-left: 20px; 
+				  /*  border: 1px solid #dad9c7; 
+				    margin-left: -1px;*/ 
+				}	
+				.tablesorter th.headerSortUp { 
+				    background-image: url(../images/asc.gif); 
+				    background-color: #aaa; 
+				}
+				.tablesorter th.headerSortDown { 
+				    background-image: url(../images/desc.gif); 
+				    background-color: #aaa; 
+				}
+				.tablesorter td { 
+					height:20px;
+				}
+				.notactive { 
+ 					background-color:red;
+				}				
 	
 									
 	#General #Footer
@@ -569,4 +665,3 @@
 				}	
 				
 .clear{clear:both;}				
-										
