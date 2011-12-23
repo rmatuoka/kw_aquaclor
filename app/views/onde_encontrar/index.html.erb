@@ -8,44 +8,45 @@
 
 <%=form_tag resultados_onde_encontrar_index_path, :method => :post, :remote => :true%>
 
-<div class="Onde_encontrar_field_1">
-	<img src="images/img_brazil_map_onde_encontrar.png" width="145" height="162" class="img_align_ondeencontrar_top"/>
-    <div class="Ondeencontrar_text_top">
-    	<span class="Ondeencontrar_title_blue_big">Onde encontrar?</span><br /><br />
-    	<span class="Text_2_int_ondeencontrar">Selecione as informações de sua localização abaixo e encontre as revendas mais próximas.</span>
-    </div>
-    <div class="Select_area">
-      <span class="labelselect2">Estado&nbsp;<img src="images/img_select_line_vert_detail.png" width="2" height="46" class="img_align_select" /></span>
-
-	  <%= collection_select :pessoa, :estado, @Estados, :state, :state,{:include_blank => true, :size=>"10"} %>
-	
-        <br /><br /><br />
-		
-		
-
-      <span class="labelselect2">Cidade<img src="images/img_select_line_vert_detail.png" width="2" height="46" class="img_align_select" />
-		  <span id='repre_cidade' style="margin-left:47px;">
-
-		  </span>
-	</span>  
-      
-
-	  </form>
-      <br /><br /><br /><br />
-      <div class="Clear"></div>
-       <!-- INICIO RESULTADOS -->
-		<div id="ContainerResultados">
-			
+	<div class="Onde_encontrar_field_1">
+		<img src="images/img_brazil_map_onde_encontrar.png" width="145" height="162" class="img_align_ondeencontrar_top"/>
+		<div class="Ondeencontrar_text_top">
+			<span class="Ondeencontrar_title_blue_big">Onde encontrar?</span><br /><br />
+			<span class="Text_2_int_ondeencontrar">Selecione as informações de sua localização abaixo e encontre as revendas mais próximas.</span>
 		</div>
-		<!-- 
-		<div class="Name_corps">
-       		<img src="images/img_corp_detail_blue.png" width="9" height="64" style="float:left;" />
-        	<span class="Title_1_corps">ISOTRONIC INDUSTRIA E COMERCIO LTDA.</span><br />
-            <span class="Text_label"><label>Local:</label> ATIBAIA / SP</span><br />
-            <span class="Text_label"><label>Bairro:</label> CENTRO</span><br />
-            <span class="Text_label"><label>CEP:</label> 12951280</span><br />
-            <span class="Text_label"><label>Telefone:</label> (11) 4411-0489 / (11) 9910-3926</span>
-       	</div> -->
-            	            
-    </div>          
+		<div class="Select_area">
+			  <label class="label_font">Estado&nbsp;</label>
+			  <img src="images/img_select_line_vert_detail.png" width="2" height="46" style=" position:absolute;top:-12px;left:65px;" />
+			  <img src="images/img_select_line_vert_detail.png" width="2" height="46" style=" position:absolute;top:45px;left:65px;" />
+			  <span class="labelselect2">
+			    
+				<%= collection_select :pessoa, :estado, @Estados, :state, :state,{:include_blank => true, :size=>"10"} %>
+			  </span>	
+			  <br /><br /><br />
+			  <label class="label_font">Cidade</label>
+			  <span class="labelselect2">
+				  <span id='repre_cidade' style="">
+					
+				  </span>
+			  </span>  
+		  </div> 
+
+		  </form>
+		  <br /><br /><br /><br />
+		  <div class="Clear"></div>
+		   <!-- INICIO RESULTADOS -->
+			<div id="ContainerResultados">
+				
+			</div>
+			<!-- 
+			<div class="Name_corps">
+				<img src="images/img_corp_detail_blue.png" width="9" height="64" style="float:left;" />
+				<span class="Title_1_corps">ISOTRONIC INDUSTRIA E COMERCIO LTDA.</span><br />
+				<span class="Text_label"><label>Local:</label> ATIBAIA / SP</span><br />
+				<span class="Text_label"><label>Bairro:</label> CENTRO</span><br />
+				<span class="Text_label"><label>CEP:</label> 12951280</span><br />
+				<span class="Text_label"><label>Telefone:</label> (11) 4411-0489 / (11) 9910-3926</span>
+			</div> -->
+								
+	</div>          
 </div>

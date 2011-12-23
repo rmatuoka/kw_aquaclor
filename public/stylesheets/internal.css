@@ -120,7 +120,7 @@ a:hover, a:active, a:focus
 		width:461px; 
 		float:right;
 		margin-top:15px;
-		margin-right:210px;		
+		margin-right:210px;	
 	}	
 	.Select_area select
 	{
@@ -130,8 +130,7 @@ a:hover, a:active, a:focus
 		font-family:Verdana, Geneva, sans-serif;
 		font-size:11px;
 		font-weight:normal;
-		color:#999999;		
-		
+		color:#999999;			
 	}	
 	.Select_area .labelselect2
 	{
@@ -145,7 +144,17 @@ a:hover, a:active, a:focus
 		font-weight:bold;
 		color:#0099cc;
 		margin-right:43px;
-		margin-left:35px;			
+		margin-left:35px;
+		width:200px;
+		height:100px !important;	
+		
+	}
+	.label_font
+	{
+		font-family:luzro-webfont;
+		font-size:14px;
+		font-weight:bold;
+		color:#0099cc;	
 	}
 	.img_align_select
 	{
