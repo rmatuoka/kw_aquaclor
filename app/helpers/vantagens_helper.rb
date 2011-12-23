@@ -1,0 +1,2 @@
+module VantagensHelper
+end

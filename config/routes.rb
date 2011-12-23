@@ -19,6 +19,7 @@ KwAquaclor::Application.routes.draw do
   
   resources :user_sessions
   resources :users
+  resources :vantagens
   resources :password_resets
   
   resources :clorador
