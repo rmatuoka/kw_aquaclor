@@ -11,9 +11,6 @@
     font-style: normal;
 }
 img{ border:none !important;}
-body{
-	background:#666;
-	}
 #Login_box
 {
 	width:554px;
@@ -23,6 +20,7 @@ body{
 	padding-bottom:28px;
 	padding-left:26px;
 	padding-right:26px;
+	margin:auto;
 }
 a,a:hover{
 	text-decoration:none;

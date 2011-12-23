@@ -98,9 +98,18 @@ a:hover, a:active, a:focus
 		position:relative;
 		top:10px;
 		left:35px;
-		font-family:luzro-webfont;
-		font-size:14px;	
-	}	
+		font-family:Verdana, Geneva, sans-serif;
+		font-size:12px;	
+		text-decoration:none;
+	}
+		#Header #Header_Revendedor a
+		{
+			text-decoration:none;
+		}
+		#Header #Header_Revendedor a:hover
+		{
+			text-decoration:underline;
+		}		
 	#Header #Logo
 	{
 		position:relative;
