@@ -53,7 +53,7 @@
 <body>
 <div id="Login_box">
 	<span class="Tit_login">Login para Revenda</span>
-	<%= link_to raw('<span class="Tit_no_cad">Ainda não sou cadastrado!</span>'), revendas_cnpj_index_path%>
+	<%= link_to raw('<span class="Tit_no_cad">Ainda não sou cadastrado!</span>'), "javascript:window.parent.location.href = '#{revendas_cnpj_index_path}';"%>
 	<div id="flash_error_cadastro" style="display:none;"></div>	
 	<%= form_for @user_session, :remote => true do |f| %>
 		<div id="BoxLogin">

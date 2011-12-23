@@ -14,13 +14,28 @@
 			<div class="Clear"></div>
 			<div class="Ranking_info">
 				<span class="Title_ranking">Ranking</span>
-				<div class="First_position">
-					<span class="Position_num_blue">1º</span><span class="Position_text">Vendeu</span><span class="Position_num_orange">99999999</span><span class="Position_text">produto(s).</span>
-				</div>
-				<div class="Clear"></div>
-				<div class="Your_position">
-					<span class="Position_num_blue">999º</span><span class="Position_text">Você vendeu</span><span class="Position_num_orange"><%=@TotalVendido%></span><span class="Position_text">produto(s).</span>
-				</div>	
+				<%if @Posicao == 1%>
+					<div class="First_position">
+						<span class="Position_text">Parabéns! Você está em </span><span class="Position_num_blue">1º</span><span class="Position_text">com</span><span class="Position_num_orange" id="pontos"><%=@Primeiro%></span><span class="Position_text">pontos(s).</span>
+					</div>
+				<%elsif @Posicao == 0%>
+					<div class="First_position">
+						<span class="Position_num_blue">1º</span><span class="Position_text">está com</span><span class="Position_num_orange"><%=@Primeiro%></span><span class="Position_text">pontos(s).</span>
+					</div>
+					<div class="Clear"></div>
+					<div class="Your_position">
+						<span class="Position_text">Você possui </span><span class="Position_num_orange" id="pontos"><%=@TotalVendido%></span><span class="Position_text">pontos(s).</span>
+					</div>
+				<%else%>
+					<div class="First_position">
+						<span class="Position_num_blue">1º</span><span class="Position_text">está com</span><span class="Position_num_orange"><%=@Primeiro%></span><span class="Position_text">pontos(s).</span>
+					</div>
+					<div class="Clear"></div>
+					<div class="Your_position">
+						<span class="Position_num_blue"><%=@Posicao%>º</span><span class="Position_text">Você está com </span><span class="Position_num_orange" id="pontos"><%=@TotalVendido%></span><span class="Position_text">pontos(s).</span>
+					</div>
+				<%end%>
+				
 				<div class="Clear"></div>				
 			
 			</div>
@@ -31,7 +46,7 @@
 			<!-- FORMULARIO -->
 			<span class="Title_ranking">Positivação de Produtos</span>
 			<div class="Search">
-				<%=form_tag ("/revendas/dashboard/busca", :remote => true)%>
+				<%=form_tag("/revendas/dashboard/busca", :remote => true)%>
 					<div class="Clear"></div><br />	<br />			
 					<div class="Bt_search"><%= image_submit_tag("bt_buscar.png")%></div>
 					<div class="Bg_input_search"><%=text_field_tag :busca%></div>

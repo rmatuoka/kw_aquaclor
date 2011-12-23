@@ -4,16 +4,18 @@
 	
 	var ret = "";
 	
-	<%@produtos.each do |p|%>
+	<%
+	@produtos.each do |p|
+		$check = ProductReceiptsUser.first(:conditions => ['products_receipt_id = ?', p.id])
+	%>
 		ret += "<div class='Product_name'>";
-		ret += "<span class=\"Product_name_text\">";
+		ret += "<span class=\"Product_name_text\" <%= "style='text-decoration:line-through;'" if $check%>>";
 		ret += "<%= escape_javascript(image_tag("img_point.png", :class=>"Point_img_align")) %><%=p.product.name%></span>";
 		<%
-		$check = ProductReceiptsUser.first(:conditions => ['user_id = ? AND products_receipt_id = ?',current_user.id, p.id])
 		if $check%>
 			ret += "<%= escape_javascript(link_to(image_tag("img_like_gray.png", :class=>"Like_img_align"), "javascript:alert('Este item já foi positivado!');"))%>";
 		<%else%>
-			ret += "<%= escape_javascript(link_to(image_tag("img_like_blue.png", :class=>"Like_img_align"), positivar_revendas_dashboard_index_path + "?p=#{p.id}" , :remote => true)) %>";
+			ret += "<%= escape_javascript(link_to(image_tag("img_like_blue.png", :onclick => "this.src = '/images/img_like_gray.png'" ,:class=>"Like_img_align"), positivar_revendas_dashboard_index_path + "?p=#{p.id}" , :remote => true)) %>";
 		<%end%>
 		
 		
