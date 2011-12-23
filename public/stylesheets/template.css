@@ -93,6 +93,14 @@ a:hover, a:active, a:focus
 		width:960px;
 		height:562px;	
 	}
+	#Header #Header_Revendedor
+	{
+		position:relative;
+		top:10px;
+		left:35px;
+		font-family:luzro-webfont;
+		font-size:14px;	
+	}	
 	#Header #Logo
 	{
 		position:relative;
