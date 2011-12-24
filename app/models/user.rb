@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   belongs_to :reseller
   
-  has_many :product_receipts_users
+  has_many :product_receipts_users, :dependent => :destroy
   has_many :products_receipts, :through => :product_receipts_users
   
   

@@ -1,0 +1,17 @@
+<div id="Box_form">
+	<%= form_for [:admin, @reseller, @receipt] do |f| %>
+	  <%= f.error_messages %>
+	  <p>
+	    <%= f.label :number, "Número" %>
+	    <%= f.text_field :number %>
+	  </p>
+	  <p>
+	    <%= f.label :obs, "Observação" %><br />
+	    <%= f.text_area :obs %>
+	  </p>		
+	  <br />
+	  <br />
+	  <br />
+	  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_reseller_receipts_path(@reseller)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+	<% end %>
+</div>

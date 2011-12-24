@@ -1,0 +1,27 @@
+<% title @reseller.name + " - Nota "+ @receipt.number %>
+
+<h1><%=  @reseller.name + " - Nota "+ @receipt.number %></h1><br />
+<p>Verifique abaixo a lista das produtos cadastradas na nota <%= @receipt.number %>.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_reseller_receipt_products_receipt_path(@reseller,@receipt)+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
+  <tr>
+    <th style="width:30%;">Produto</th>
+    <th style="width:25%;">Nota</th>
+    <th style="width:15%;">Quantidade</th>
+    <th colspan="3" style="width:30%;">Ações</th>
+</tr>
+</thead> 
+<tbody>
+  <% for products_receipt in @products_receipts %>
+    <tr>
+      <td><%= products_receipt.product.name %></td>
+      <td><%= products_receipt.receipt.number %></td>
+      <td><%= products_receipt.amount %></td>
+      <td><%= link_to "Excluir", admin_reseller_receipt_products_receipt_path(@reseller,@receipt,products_receipt), :confirm => "Deseja realmente excluir este produto? Está operação não poderá ser desfeita.", :method => :delete %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

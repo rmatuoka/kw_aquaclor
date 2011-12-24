@@ -1,11 +1,13 @@
 KwAquaclor::Application.routes.draw do
 
-  namespace(:admin){ resources :products }
-
   #Inicio do namespace Admin
   namespace(:admin){
     resources :static_contents
-    resources :resellers
+    resources(:resellers) do
+      resources(:receipts) do
+        resources :products_receipts
+      end
+    end
     resources :products 
     resources :users do
       collection do

@@ -60,17 +60,18 @@ img{ border:none !important;}
 			{
 				position:absolute;
 				top:25px;
-				left:380px;
+				left:345px;
 				font-family:luzro-webfont;
 				font-size:14px;
 				color:#c2bbbb;
 				font-weight:normal;		
 				text-decoration:none;
 			}
-				.Align_bt_altera_dados:hover
+				.Align_bt_altera_dados a:hover
 				{
-					text-decoration:underline;
+					text-decoration:underline !important;
 				}
+				
 			.Img_info_align
 			{
 				position:absolute;

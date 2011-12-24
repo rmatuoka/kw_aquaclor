@@ -1,0 +1,22 @@
+<% title "Nota - "+ @receipt.number %>
+
+<h1><%= "Nota - "+ @receipt.number %></h1><br />
+<br />
+<p>Verifique se as informações abaixo estão corretas.</p><br />
+<br />
+<p>
+<p>
+  <strong>Numero:</strong>
+  <%= @receipt.number %>
+</p>
+<p>
+  <strong>Observação:</strong><br />
+  <%= @receipt.number %>
+</p>
+<br />
+<br />
+<br />
+<p>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_reseller_receipts_path(@reseller)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+</p>
+

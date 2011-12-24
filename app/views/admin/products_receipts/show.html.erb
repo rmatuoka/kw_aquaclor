@@ -1,0 +1,12 @@
+<% title "Admin/Products Receipt" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @products_receipt.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_admin_products_receipt_path(@products_receipt) %> |
+  <%= link_to "Destroy", [:admin, @products_receipt], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", admin_products_receipts_path %>
+</p>

@@ -1,0 +1,17 @@
+<div id="Box_form">
+	<%= form_for [:admin, @reseller, @receipt, @products_receipt] do |f| %>
+	  <%= f.error_messages %>
+	  <p>		
+	    <%= f.label :product_id, "Produto" %>
+		<%= f.collection_select :product_id,@relprodutos,:id,:name %> 
+	  </p>
+	  <p>
+	    <%= f.label :amount, "Quantidade" %>
+	    <%= f.text_field :amount %>
+	  </p>	
+	  <br />
+	  <br />
+	  <br />
+	  <p><%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_reseller_receipt_products_receipts_path(@reseller,@receipt)+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%> <%= f.submit "Salvar", :class => "Bt_enviar" %></p>
+	<% end %>
+</div>
