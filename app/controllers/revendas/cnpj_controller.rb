@@ -3,9 +3,9 @@ class Revendas::CnpjController < ApplicationController
 	end
 	
 	def create
-    @Revenda = Reseller.find_by_cnpj(params[:reseller])
+    @Revenda = Reseller.find_by_cpnj(params[:reseller])
     
-    if @Revenda
+    if @Revenda.count > 0
       #GRAVA O ID DA REVENDA
       session[:reseller_id] = @Revenda.id
       redirect_to cadastro_path
