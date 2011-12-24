@@ -16,6 +16,13 @@ class Admin::ResellersController < ApplicationController
   end
 
   def create
+    if !params[:reseller][:cnpj].blank?
+      cnpj = params[:reseller][:cnpj]
+      cnpj = cnpj.gsub(".","")
+      cnpj = cnpj.gsub("-","")
+      cnpj = cnpj.gsub("/","")
+      params[:reseller][:cnpj] = cnpj
+    end
     @reseller = Reseller.new(params[:reseller])
     if @reseller.save
       redirect_to [:admin, @reseller], :notice => "Successfully created reseller."
@@ -29,6 +36,13 @@ class Admin::ResellersController < ApplicationController
   end
 
   def update
+    if !params[:reseller][:cnpj].blank?
+      cnpj = params[:reseller][:cnpj]
+      cnpj = cnpj.gsub(".","")
+      cnpj = cnpj.gsub("-","")
+      cnpj = cnpj.gsub("/","")
+      params[:reseller][:cnpj] = cnpj
+    end
     @reseller = Reseller.find(params[:id])
     if @reseller.update_attributes(params[:reseller])
       redirect_to [:admin, @reseller], :notice  => "Successfully updated reseller."

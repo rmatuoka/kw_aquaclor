@@ -12,7 +12,7 @@
  	<%= csrf_meta_tag %>
 <script>
 $(document).ready(function() {
-	$("#Header_Revendedor > a").fancybox({ 
+	$(".A_Revendedor").fancybox({ 
 		'titleShow' : false, 
 		'autoscale' : false, 
 		'transitionIn' : 'elastic', 
@@ -34,7 +34,11 @@ $(document).ready(function() {
       <div class="Content">
         <div id="Header">
 			<div id="Header_Revendedor">
-				<%= link_to "|  Revendas  |", login_path()%>
+				<% if current_user %>
+					<%= link_to "|  Revendas  |", revendas_dashboard_index_path()%>
+				<% else %>
+					<%= link_to "|  Revendas  |", login_path(), :class=>"A_Revendedor"%>
+				<% end %>
 			</div>
             <div id="Logo">
 				<%= link_to image_tag("logo_aquaclor.png", :width=>"492", :height=>"80"),root_path()%>

@@ -29,7 +29,7 @@ jQuery(document).ready(function()
 						<%= link_to image_tag("img_house.png", :width=>"28", :height=>"23", :class=>"Usr_bt_align"), root_path%><span>Bem Vindo, <%= current_user.name %></span>
 					</div>
 					<div id="Buttons">
-						<%= link_to(image_tag("bt_config.png", :width=>"22", :height=>"22") , edit_user_path(:current), :class => "Usr_bt_align") %>
+						<%= link_to(image_tag("bt_config.png", :width=>"22", :height=>"22") ,edit_revendas_user_path(current_user), :class => "Usr_bt_align") %>
 						<%= link_to(image_tag("bt_ajuda.png", :width=>"22", :height=>"22") , "", :class => "Usr_bt_align") %>
 						<%= link_to(image_tag("bt_logout.png", :width=>"22", :height=>"22") , logout_path, :class => "Usr_bt_align") %>
 					</div>
@@ -47,7 +47,6 @@ jQuery(document).ready(function()
 						<ul id="menu">
 							<li class="parent aberto"><a href="#" title=""><h3>Notas</h3></a>
 								<ul class="sub-menu">
-									<li><%= link_to "Cadastro de notas","#",:onclick=>"alert('Em Desenvolvimento!')"%></li>
 									<li><%= link_to "Cadastro de produtos",admin_products_path %></li>
 									<li><%= link_to "Cadastro de Revendas",admin_resellers_path%></li>									
 								</ul>

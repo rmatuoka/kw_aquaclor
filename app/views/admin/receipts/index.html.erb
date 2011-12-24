@@ -1,0 +1,26 @@
+<% title @reseller.name + " - Notas" %>
+
+<h1><%=  @reseller.name + " - Notas"%></h1><br />
+<p>Verifique abaixo a lista das notas cadastradas no sistema.</p><br />
+<br />
+<p style="text-align: right;"><%= submit_tag "+ Criar novo",:type=>"button",:onclick=>"window.open('"+new_admin_reseller_receipt_path(@resseller)+"','_self');", :class => "Bt_enviar"%> </p>
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
+  <tr>
+    <th style="width:50%;">Numero</th>
+    <th colspan="4" style="width:30%;">Ações</th>
+</tr>
+</thead> 
+<tbody>
+  <% for receipt in @receipts %>
+    <tr>
+      <td><%= receipt.number %></td>
+      <td><%= link_to "Visualizar", admin_reseller_receipt_path(@reseller,receipt) %></td>
+      <td><%= link_to "Editar", edit_admin_reseller_receipt_path(@reseller,receipt) %></td>
+      <td><%= link_to "Excluir", admin_reseller_receipt_path(@reseller,receipt), :confirm => "Deseja realmente excluir está nota? Está operação não poderá ser desfeita.", :method => :delete %></td>
+      <td> | <%= link_to "Cadastrar Produtos", admin_reseller_receipt_products_receipts_path(@reseller,receipt) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

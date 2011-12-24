@@ -7,7 +7,13 @@
 			<div class="Info_user">
 				<span class="h1_title_info"><%=current_user.name%></span><br />
 				<span class="h2_title_info"><%=current_user.reseller.name%></span>
-				<span class="Align_bt_altera_dados"><%=link_to "Alterar dados pessoais", edit_revendas_user_path(current_user), :style => "text-decoration:none;"%></span>
+				<span class="Align_bt_altera_dados">
+					| <%=link_to "Alterar dados pessoais", edit_revendas_user_path(current_user), :style => "text-decoration:none;"%> 
+					| <%= link_to "Sair", logout_path, :style => "text-decoration:none;"%> |
+				<%if (current_user.role == :admin) %>
+					| <%= link_to "Abrir o Administrador", admin_static_contents_path, :style => "text-decoration:none;margin-left: 24px;margin-right: 23px;"%> |
+				<% end %>
+				</span>
 				<%= image_tag("img_detail_line_user_info.png", :class=>"Img_info_align")%>
 			</div>
 			
