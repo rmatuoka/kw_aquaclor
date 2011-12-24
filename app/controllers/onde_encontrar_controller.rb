@@ -29,7 +29,7 @@ class OndeEncontrarController < ApplicationController
   end
 
   def popula_cidades
-    @Cidades = Reseller.all(:conditions => ['state = ?', params[:estado]], :group => "city", :order => "city ASC")
+    @Cidades = Reseller.all(:conditions => ['state = ? and active =  true', params[:estado]], :group => "city", :order => "city ASC")
     
   end
 
