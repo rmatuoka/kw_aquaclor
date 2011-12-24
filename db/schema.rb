@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111222210406) do
+ActiveRecord::Schema.define(:version => 20111224003833) do
 
   create_table "product_receipts_users", :force => true do |t|
     t.integer  "user_id"
@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20111222210406) do
     t.string   "cnpj"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "active"
   end
 
   create_table "roles", :force => true do |t|

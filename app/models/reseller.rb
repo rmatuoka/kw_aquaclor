@@ -8,6 +8,10 @@ class Reseller < ActiveRecord::Base
   validates_presence_of :city, :message=> " - preencha o campo!" 
   
   def self.find_by_cpnj(cnpj)
-    Reseller.first(:conditions => ["cnpj = ?", cnpj])
+    Reseller.first(:conditions => ["cnpj = ? and active =  true", cnpj])
   end
+
+  def self.all_active
+    Reseller.all(:conditions => ['active =  true'])
+  end  
 end

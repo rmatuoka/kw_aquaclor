@@ -12,7 +12,7 @@ class Admin::ResellersController < ApplicationController
   end
 
   def new
-    @reseller = Reseller.new
+    @reseller = Reseller.new(:active => true)
   end
 
   def create

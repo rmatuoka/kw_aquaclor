@@ -15,7 +15,7 @@ class Admin::ProductsReceiptsController < ApplicationController
 
   def new
     @products_receipt = @receipt.products_receipts.build
-    @relprodutos = Product.all
+    @relprodutos = Product.all(:conditions => "active = true")
   end
 
   def create

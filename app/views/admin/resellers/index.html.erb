@@ -8,16 +8,18 @@
 <table cellspacing="0" class="tablesorter">
   <thead> 
   <tr>
-    <th style="width:50%;">Nome</th>
+    <th style="width:40%;">Nome</th>
     <th style="width:20%;">Cnpj</th>
+    <th style="width:10%;">Participa?</th>
     <th colspan="4" style="width:30%;">Ações</th>
 </tr>
 </thead> 
 <tbody>
   <% for reseller in @resellers %>
-    <tr>
+    <tr <%='class=notactive' if !reseller.active%>>
       <td><%= reseller.name %></td>
       <td><%= reseller.cnpj %></td>
+      <td><%= print_active(reseller.active) %></td>
       <td><%= link_to "Visualizar", [:admin, reseller] %></td>
       <td><%= link_to "Editar", edit_admin_reseller_path(reseller) %></td>
       <td><%= link_to "Excluir", [:admin, reseller], :confirm => raw('Deseja realmente excluir está revenda? Está operação não poderá ser desfeita! Todas as notas, e usuários vinculados a está revenda também serão excluidos!'), :method => :delete %></td>

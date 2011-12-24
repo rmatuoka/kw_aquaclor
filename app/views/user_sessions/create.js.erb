@@ -11,5 +11,9 @@
 	erro += "<div class='clear'></div>";
 	jQuery('#flash_error_cadastro').html(erro);
 <%else%>
-	window.parent.location.href = "<%= revendas_dashboard_index_path %>";
+	<% if (User.find(@user_session.user).has_role? :admin) %>
+    	window.parent.location.href = "<%= admin_static_contents_path %>";
+    <% else %>
+		window.parent.location.href = "<%= revendas_dashboard_index_path %>";
+    <% end %>	
 <%end%>

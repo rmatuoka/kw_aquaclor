@@ -26,7 +26,7 @@
   <p>
     <%= f.label :state, "Estado" %>
 
-	<%= f.select :state, options_for_select([["AC", "AC"], ["AL","AL"], ["AP", "AP"],
+	<%= f.select :state, ([["AC", "AC"], ["AL","AL"], ["AP", "AP"],
 	["AM", "AM"], ["BA", "BA"], ["CE", "CE"],
 	["DF", "DF"], ["ES", "ES"], ["GO", "GO"],
 	["MA", "MA"], ["MT", "MT"], ["MS", "MS"],
@@ -47,6 +47,10 @@
   <p>
     <%= f.label :cnpj, "Cnpj" %>
     <%= f.text_field :cnpj %>
+  </p>
+  <p>
+	<%= f.label :active, "Participa?"%>
+	<%= f.check_box :active  %>
   </p>
   <br />
   <br />
