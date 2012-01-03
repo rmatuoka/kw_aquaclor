@@ -198,7 +198,7 @@ a:hover, a:active, a:focus
 		display:block;
 		position:relative;
 		width:513px;
-		height:auto;;
+		height:auto;
 		float:left;	
 		padding-right:27px;
 	}
@@ -290,6 +290,7 @@ a:hover, a:active, a:focus
 {
 	position:relative;
 	width:600px;
+	cursor:pointer;
 }
 .Down_content
 {
@@ -484,7 +485,7 @@ a:hover, a:active, a:focus
 	position:relative;
 	height:100px;
 	width:940px;
-	margin-top:225px;	
+	margin-top:425px;	
 }
 .Text_Footer
 {
