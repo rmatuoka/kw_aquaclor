@@ -51,11 +51,14 @@ jQuery(document).ready(function()
 									<li><%= link_to "Cadastro de Revendas",admin_resellers_path%></li>									
 								</ul>
 							</li>
+							<%if (current_user.role == :admin) %>
 							<li class="parent aberto"><a href="#" title=""><h3>Ajuste do Site</h3></a>
 								<ul class="sub-menu">
 									<li><%= link_to "Gerenciar Usuários",admin_users_path%></li>
+									<li><%= link_to "Verificar Rank", admin_rank_index_path%>
 								</ul>
 							</li>
+							<% end %>
 						</ul>
 					</div>
 				</div>

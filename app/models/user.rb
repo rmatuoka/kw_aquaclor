@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
   
   validates_presence_of :name, :message=> " - preencha o campo!"
   validates_presence_of :email, :message=> " - preencha o campo!"
+  validates_presence_of :accept, :message=> " - você deve concordar com os termos!"
+  validates_uniqueness_of :email
   
   attr_writer :role
   after_save :define_role

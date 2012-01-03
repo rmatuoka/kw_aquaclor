@@ -5,8 +5,12 @@
 <p>Verifique se as informações abaixo estão corretas.</p><br />
 <br />
 <p>
-  <strong>Nome:</strong>
+  <strong>Razão Social:</strong>
   <%= @reseller.name %>
+</p>
+<p>
+  <strong>Nome Fantasia:</strong>
+  <%= @reseller.fantasy_name %>
 </p>
 <p>
   <strong>Endereço:</strong>
@@ -41,12 +45,12 @@
   <%= @reseller.cnpj %>
 </p>
 <p>
-  <strong>Cnpj:</strong>
-  <%= @reseller.cnpj %>
-</p>
-<p>
   <strong>Revenda participa da promoção?</strong>
   <%= print_active(@reseller.active) %>
+</p>
+<p>
+  <strong>Revenda será relacionada na tela "Onde Encontrar"?</strong>
+  <%= print_active(@reseller.publish) %>
 </p>
 <br />
 <br />

@@ -1,0 +1,22 @@
+<% title "Rank do Revendedor" + @resseller.first.user.name %>
+
+<h1>Rank</h1><br />
+<p>Vendas do revendedor - <%= @resseller.first.user.name %>.</p><br />
+<br />
+<br />
+<table cellspacing="0" class="tablesorter">
+  <thead> 
+  <tr>
+	<th style="width:10%;">Nota</th>
+    <th style="width:30%;">Produto</th>
+</tr>
+</thead> 
+<tbody>
+  <% for rank in @resseller %>
+    <tr>
+      <td><%= rank.products_receipt_id %></td>
+      <td><%= rank.products_receipt_id %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

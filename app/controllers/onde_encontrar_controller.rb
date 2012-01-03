@@ -7,12 +7,12 @@ class OndeEncontrarController < ApplicationController
   end
   
   def load_states
-    @Estados = Reseller.all(:conditions => "active =  true", :group => "state", :order => "state ASC")
+    @Estados = Reseller.all(:conditions => "publish =  true", :group => "state", :order => "state ASC")
   end
   
   def resultados
     #flash[:msg] = params[:pessoa][:estado] + params[:pessoa][:cidade]
-    @Resultados = Reseller.all(:conditions => ['state = ? AND city = ? and active =  true', params[:pessoa][:estado], params[:pessoa][:cidade]])
+    @Resultados = Reseller.all(:conditions => ['state = ? AND city = ? and publish =  true', params[:pessoa][:estado], params[:pessoa][:cidade]])
     
     @retorno = ""
     
@@ -29,7 +29,7 @@ class OndeEncontrarController < ApplicationController
   end
 
   def popula_cidades
-    @Cidades = Reseller.all(:conditions => ['state = ? and active =  true', params[:estado]], :group => "city", :order => "city ASC")
+    @Cidades = Reseller.all(:conditions => ['state = ? and publish =  true', params[:estado]], :group => "city", :order => "city ASC")
     
   end
 

@@ -176,9 +176,15 @@ form
 		position:absolute;
 		top:230px;
 		left:95px;
-		width:200px;
+		width:315px;
 		height:20px;
 	}
+		.checkbox_inp label.error
+		{
+			position: absolute;
+			left: 138px;
+			top: -5px;
+		}
 	.checkbox_inp input
 	{
 		width:10px;		
@@ -203,6 +209,11 @@ form
 	font-size: 1px;
 	line-height: 0px;
 }
+	#flash_error_cadastro {
+		position: relative;
+		width: 530px;
+		height: auto;
+	}
  	.flash_ops
 	{
 		background-image:url(../images/bg_ops.png);
@@ -222,7 +233,7 @@ form
 .Box_warning_text
 {
 	position:relative;
-	width:526px;
+	width:400px;
 	min-height:102px;
 	height:auto;
 	float:right;

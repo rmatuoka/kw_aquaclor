@@ -10,11 +10,14 @@
 	erro += "<%= escape_javascript(raw("Sobrenome " + @user.errors[:last_name].to_s + "<br/ >")) if !@user.errors[:last_name].empty?%> ";
 	erro += "<%= escape_javascript(raw("As senhas não conferem! <br />")) if !@user.errors[:password].empty?%>";
 	erro += "<%= escape_javascript(raw("E-mail já cadastrado ou em branco! <br>")) if !@user.errors[:email].empty?%>";
+	erro += "<%= escape_javascript(raw("Termo de uso " + @user.errors[:accept].to_s + "<br/ >")) if !@user.errors[:accept].empty?%> ";
 	erro += 	"</p>";
 	erro += "<br /><br />"
 	erro +=	"</div>";
 	erro += "<div class='clear'></div>";
 	jQuery('#flash_error_cadastro').html(erro);
+	jQuery('#flash_error_cadastro').focus();
+	window.scrollTo(0, 0);
 <%else%>
 	window.location.href = "<%= revendas_dashboard_index_path %>";
 <%end%>

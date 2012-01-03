@@ -12,7 +12,7 @@ class Revendas::CnpjController < ApplicationController
       $revenda_id = @Revenda.id
       redirect_to cadastro_path
     else
-      flash[:msg] = "Revenda inválida. Digite o CNPJ, APENAS os números."
+      flash[:msg] = "Revenda inválida ou não autorizada. Digite o CNPJ, APENAS os números."
       redirect_to revendas_cnpj_index_path
     end
   end
