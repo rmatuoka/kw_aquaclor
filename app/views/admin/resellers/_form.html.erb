@@ -4,8 +4,12 @@
 	  :message => "Os campos abaixo estão com erro:",
 	  :header_tag => :h3 %>
   <p>
-    <%= f.label :name, "Nome" %>
+    <%= f.label :name, "Razão Social" %>
     <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :fantasy_name, "Nome Fantasia" %>
+    <%= f.text_field :fantasy_name %>
   </p>
   <p>
     <%= f.label :address, "Endereço" %>
@@ -51,6 +55,10 @@
   <p>
 	<%= f.label :active, "Participa?"%>
 	<%= f.check_box :active  %>
+  </p>
+  <p>
+	<%= f.label :publish, "Relaciona?"%>
+	<%= f.check_box :publish  %>
   </p>
   <br />
   <br />

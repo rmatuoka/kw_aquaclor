@@ -2,11 +2,15 @@
 <%= stylesheet_link_tag "cadastro"%>
 <%=javascript_include_tag "jquery.validate.min.js"%>
 <%=javascript_include_tag "meusmetodos.js"%>
-<%#=javascript_include_tag "jquery.meio.mask.js"%>
+<%=javascript_include_tag "jquery.meio.mask.js"%>
 	<script>
-		jQuery(document).ready(function(){		
+		jQuery(document).ready(function(){	
+		jQuery('input[name="user[phone]"]').setMask('(99)9999-9999');		
     	jQuery('#new_user').validate({
         rules: {
+			"user[accept]":{
+				required: true,
+			},
             "user[name]": {
                 required: true,
                 minlength: 2
@@ -27,6 +31,9 @@
 			
         },
         messages: {
+			"user[accept]":{
+				required: "Você deve concordar!"
+			},
             "user[name]":{
 				required: "Preencha o seu nome",
 				minlength: 	"Mínimo de 2 caracteres"
@@ -203,7 +210,7 @@ fortuito.
 			</textarea></div>
 			<br />	
 			<div class="checkbox_inp">
-				<input type="checkbox" /><span class="label_checkbox">Aceito os termos.</span>
+				<%= f.check_box :accept %><span class="label_checkbox">Aceito os termos.</span>
 			</div>	
 		</div>
 		<%end%>		

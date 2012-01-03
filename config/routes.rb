@@ -8,6 +8,7 @@ KwAquaclor::Application.routes.draw do
         resources :products_receipts
       end
     end
+    resources :rank
     resources :products 
     resources :users do
       collection do
