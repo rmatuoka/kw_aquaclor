@@ -1,22 +1,29 @@
-<% title "Rank do Revendedor" + @resseller.first.user.name %>
+<% title "Vendas do Revendedor - " + @resseller.first.user.name + " - " + @resseller.first.user.reseller.name%>
 
 <h1>Rank</h1><br />
-<p>Vendas do revendedor - <%= @resseller.first.user.name %>.</p><br />
+<p>Vendas do Revendedor - <%= @resseller.first.user.name %> - <%= @resseller.first.user.reseller.name%>.</p><br />
 <br />
 <br />
 <table cellspacing="0" class="tablesorter">
   <thead> 
   <tr>
-	<th style="width:10%;">Nota</th>
-    <th style="width:30%;">Produto</th>
+	<th style="width:20%;">Nota</th>
+    <th style="width:40%;">Produto</th>
+    <th style="width:40%;">Revenda</th>
 </tr>
 </thead> 
 <tbody>
   <% for rank in @resseller %>
     <tr>
-      <td><%= rank.products_receipt_id %></td>
-      <td><%= rank.products_receipt_id %></td>
+      <td><%= rank.products_receipt.receipt.number %></td>
+      <td><%= rank.products_receipt.product.name %></td>
+      <td><%= rank.products_receipt.receipt.reseller.name %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
+<br />
+<br />
+<p>
+	<%= submit_tag "Voltar",:type=>"button",:onclick=>"window.open('"+admin_rank_index_path+"','_self');", :class => "Bt_enviar", :style=>"margin-right: 5px;"%>
+</p>

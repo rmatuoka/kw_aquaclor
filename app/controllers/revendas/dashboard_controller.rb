@@ -1,31 +1,33 @@
 class Revendas::DashboardController < ApplicationController
 	before_filter :check_login
 	
-	def index
-	  #CALCULA O PRIMEIRO
-	  @Usuarios = ProductReceiptsUser.all(:group => :user_id)
-	  @Primeiro = 0
-	  @Counter = 0
-	  @Posicao = 0
-	  
-	  @Usuarios.each do |u|
-      @Counter = @Counter + 1
-      
-      @User = User.find(u.user_id)
-      @TotalUser = @User.product_receipts_users.all.count
-      
-      if @TotalUser > @Primeiro
-        @Primeiro = @TotalUser
-      end
-      
-      @Posicao = @Counter if @User.id == current_user.id
-
+def index
+  @Count = 0
+  @Posicao = 0
+  @TotalVendido = 0
+  @resellers = ProductReceiptsUser.find(:all,
+                                        :select=> "`product_receipts_users`.`user_id`, count(`product_receipts_users`.`products_receipt_id`) as `totalvendas`",
+                                        :group => :user_id,
+                                        :order=> " `totalvendas` desc, `product_receipts_users`.`user_id` ")
+  if @resellers.count > 0
+    @Rank = true
+    if @resellers.first.user_id == current_user.id
+      @Posicao = 1
+      @Primeiro = @resellers.first.totalvendas
+    else
+      @Primeiro = @resellers.first.totalvendas
+      @resellers.each do |u|
+        @Count = @Count + 1
+        if u.user_id == current_user.id
+          @Posicao = @Count
+          @TotalVendido = u.totalvendas
+        end
+      end 
     end
-    
-	  #CALCULA TOTAL DO USUARIO
-	  @TotalVendido = current_user.product_receipts_users.all.count
-	  
-	end
+  else
+    @Rank = false
+  end
+end
 	
 	def busca
     @nota = Receipt.first(:conditions => ['number = ?', params[:busca].to_i])
