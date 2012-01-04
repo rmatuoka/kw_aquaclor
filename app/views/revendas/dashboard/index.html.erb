@@ -10,7 +10,7 @@
 				<span class="Align_bt_altera_dados">
 					| <%=link_to "Alterar dados pessoais", edit_revendas_user_path(current_user), :style => "text-decoration:none;"%> 
 					| <%= link_to "Sair", logout_path, :style => "text-decoration:none;"%> |
-				<%if (current_user.role == :admin) %>
+				<%if ((current_user.role == :admin) || (current_user.role == :supervisor)) %>
 					| <%= link_to "Abrir o Administrador", admin_static_contents_path, :style => "text-decoration:none;margin-left: 24px;margin-right: 23px;"%> |
 				<% end %>
 				</span>
