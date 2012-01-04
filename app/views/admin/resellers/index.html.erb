@@ -22,7 +22,7 @@
       <td><%= print_active(reseller.active) %></td>
       <td><%= link_to "Visualizar", [:admin, reseller] %></td>
       <td><%= link_to "Editar", edit_admin_reseller_path(reseller) %></td>
-      <td><%= link_to "Excluir", [:admin, reseller], :confirm => raw('Deseja realmente excluir está revenda? Está operação não poderá ser desfeita! Todas as notas, e usuários vinculados a está revenda também serão excluidos!'), :method => :delete %></td>
+      <td><%= link_to("Excluir", [:admin, reseller], :confirm => raw('Deseja realmente excluir está revenda? Está operação não poderá ser desfeita! Todas as notas, e usuários vinculados a está revenda também serão excluidos!'), :method => :delete) if !(current_user.role == :supervisor) %></td>
       <td> | <%= link_to "Cadastrar Notas", admin_reseller_receipts_path(reseller) %></td>
     </tr>
   <% end %>

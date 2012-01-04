@@ -1,6 +1,7 @@
 class Admin::ResellersController < ApplicationController
   access_control do
       allow :admin
+      allow :supervisor, :to => [:index, :show, :new, :create , :edit, :update]
   end
   layout "inadmin"      
   def index

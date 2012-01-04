@@ -18,7 +18,7 @@
       <td><%= receipt.number %></td>
       <td><%= link_to "Visualizar", admin_reseller_receipt_path(@reseller,receipt) %></td>
       <td><%= link_to "Editar", edit_admin_reseller_receipt_path(@reseller,receipt) %></td>
-      <td><%= link_to "Excluir", admin_reseller_receipt_path(@reseller,receipt), :confirm => "Deseja realmente excluir está nota? Está operação não poderá ser desfeita.", :method => :delete %></td>
+      <td><%= link_to("Excluir", admin_reseller_receipt_path(@reseller,receipt), :confirm => "Deseja realmente excluir está nota? Está operação não poderá ser desfeita.", :method => :delete) if !(current_user.role == :supervisor) %></td>
       <td> | <%= link_to "Cadastrar Produtos", admin_reseller_receipt_products_receipts_path(@reseller,receipt) %></td>
     </tr>
   <% end %>

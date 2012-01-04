@@ -20,7 +20,7 @@
       <td><%= print_active(product.active) %></td>
       <td><%= link_to "Visualizar", [:admin, product] %></td>
       <td><%= link_to "Editar", edit_admin_product_path(product) %></td>
-      <td><%= link_to "Excluir", [:admin, product], :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to("Excluir", [:admin, product], :confirm => 'Are you sure?', :method => :delete) if !(current_user.role == :supervisor)%></td>
     </tr>
   <% end %>
   </tbody>
