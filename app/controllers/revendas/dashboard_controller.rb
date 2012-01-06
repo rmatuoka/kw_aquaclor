@@ -30,7 +30,7 @@ def index
 end
 	
 	def busca
-    @nota = Receipt.first(:conditions => ['number = ?', params[:busca]])
+    @nota = Receipt.first(:conditions => ['number = ? and reseller_id = ? ', params[:busca],current_user.reseller_id])
     
     if @nota
       @produtos = @nota.products_receipts.all
