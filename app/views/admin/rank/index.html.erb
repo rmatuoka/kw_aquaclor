@@ -1,7 +1,20 @@
 <% title "Rank" %>
-
+<%content_for :head do%>
+	<style>
+	p.ShowMsgNotas{
+		text-align:center;
+		font-size: 14px;
+	}
+		p.ShowMsgNotas span{
+			font-weight: bold;
+		}
+	</style>
+<%end%>
 <h1>Rank</h1><br />
-<p>Verifique abaixo o rank de venda.</p><br />
+<p>Verifique abaixo o rank de venda.</p>
+<br />
+<p class="ShowMsgNotas">Existem <span><%= @NotasCadastradas %></span> notas cadastradas, totalizando <span><%= @ProdutosCadastrados %></span> produtos!</p>
+<p class="ShowMsgNotas">Destas <span><%= @NotasValidadas%></span> notas já estão validadas!</p><br />
 <br />
 <br />
 <table cellspacing="0" class="tablesorter">

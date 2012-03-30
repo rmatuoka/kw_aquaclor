@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(:version => 20120105194042) do
     t.boolean  "active"
     t.string   "fantasy_name"
     t.boolean  "publish"
-    t.string   "internal_code"
+    t.string   "internal_code", :limit => 14
   end
 
   create_table "roles", :force => true do |t|

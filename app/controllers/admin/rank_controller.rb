@@ -8,6 +8,9 @@ class Admin::RankController < ApplicationController
 												  :select=> "`product_receipts_users`.`user_id`, count(`product_receipts_users`.`products_receipt_id`) as `totalvendas`",
 												  :group => :user_id,
 												  :order=> " `totalvendas` desc, `product_receipts_users`.`user_id` ")
+		@NotasCadastradas = Receipt.count
+		@ProdutosCadastrados = ProductsReceipt.count
+		@NotasValidadas = ProductReceiptsUser.count
   end
 
   def show
