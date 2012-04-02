@@ -20,10 +20,10 @@
 <table cellspacing="0" class="tablesorter">
   <thead> 
   <tr>
-	<th style="width:10%;">Posição</th>
-    <th  style="width:15%;">Pontos</th>	
-    <th style="width:30%;">Nome</th>
-    <th style="width:30%;">Revenda</th>
+    <th style="width:40%;">Revenda</th>	
+    <th style="width:25%;">Nome</th>
+    <th  style="width:10%;">Pontos</th>
+	<th style="width:10%;">Posição</th>		
     <th  style="width:15%;">Ações</th>
 </tr>
 </thead> 
@@ -31,10 +31,10 @@
   <% i = 1 %>	
   <% for rank in @ressellers %>
     <tr>
-	  <td><%= i %></td>
-      <td><%= rank.totalvendas %></td>	
+      <td><%= rank.user.reseller.name %> - Registrados:<%= @testearray[rank.user.reseller_id]%></td>	
       <td><%= rank.user.name %></td>
-      <td><%= rank.user.reseller.name %></td>
+      <td><%= rank.totalvendas %></td>	
+	  <td><%= i %></td>
       <td><%= link_to "Visualizar Notas", admin_rank_path(rank.user_id) %></td>
     </tr>
 	<% i = i +1 %>
