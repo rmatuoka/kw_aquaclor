@@ -1,4 +1,8 @@
 class Revendas::CnpjController < ApplicationController
+  access_control do
+      allow :admin
+      allow :supervisor     
+  end  
   @@Revendasid = 0
 	def index
 	end

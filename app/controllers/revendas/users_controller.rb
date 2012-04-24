@@ -1,4 +1,8 @@
 class Revendas::UsersController < ApplicationController
+  access_control do
+      allow :admin
+      allow :supervisor   
+  end
 layout 'application',:except => :index 
 before_filter :navegadorie6
 #before_filter :check_reseller_id, :except => [:edit, :update]

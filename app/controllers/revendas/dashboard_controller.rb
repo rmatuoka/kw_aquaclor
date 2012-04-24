@@ -1,4 +1,8 @@
 class Revendas::DashboardController < ApplicationController
+  access_control do
+      allow :admin
+      allow :supervisor  
+  end  
 	before_filter :check_login
 	
 def index
